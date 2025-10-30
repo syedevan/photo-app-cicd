@@ -43,7 +43,7 @@ jobs:
     
     # FIX: Artifact upload targets the entire subfolder contents for deployment
     - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v3
+      uses: actions/upload-artifact@v4
       with:
         name: python-app
         path: ${{ github.workspace }}/photos-app-master
@@ -76,3 +76,4 @@ jobs:
         slot-name: 'production'
         publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }} # <--- Replace with your exact secret name
         package: .
+
