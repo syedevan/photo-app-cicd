@@ -1,30 +1,31 @@
-# This is the top-level workflow name
-name: Build and deploy Python app to Azure web App - photosapp-service
-
-# The env block needs to be indented correctly if it is nested under a job, 
-# but for global settings, it should be at the top level, as below:
+name: Build and deploy Python app to Azure Web App - photosapp-service
 
 env:
-  AZURE_WEBAPP_NAME: photosapp-service       # Your App Service Name
-  PYTHON_VERSION: '3.11'                     # Recommended Python version
-  AZURE_WEBAPP_PACKAGE_PATH: '.'             # Deploy the whole working directory
+  # --- AZURE SETTINGS (Change these if your Web App name or Python version change) ---
+  AZURE_WEBAPP_NAME: photosapp-service
+  PYTHON_VERSION: '3.11'
+  
+  # --- DEPLOYMENT SETTINGS ---
+  AZURE_WEBAPP_PACKAGE_PATH: '.'                 # Deploy the whole artifact package
   STARTUP_COMMAND: 'gunicorn --bind 0.0.0.0 "photos:app"' # Linux command for Flask
-
+  
 on:
   push:
     branches:
       - main
   workflow_dispatch:
 
-# ... the rest of the file follows (jobs: build: ...)
-
 jobs:
   build:
     runs-on: ubuntu-latest
-    # --- FIX 1: Set the working directory for the entire build job ---
+    
+    # -------------------------------------------------------------
+    # FIX: Set the working directory for the build steps 
+    # This is crucial because your files are in the nested 'photos-app-master' folder.
+    # -------------------------------------------------------------
     defaults:
       run:
-        working-directory: ./photos-app-master # <--- Directs actions into the nested folder
+        working-directory: ./photos-app-master # <-- Fixes the "requirements.txt not found" error
 
     steps:
     - uses: actions/checkout@v4
@@ -34,28 +35,27 @@ jobs:
       with:
         python-version: ${{ env.PYTHON_VERSION }}
 
-    # - name: Create and start virtual environment and install dependencies # (Unnecessary for Azure App Service)
-
-    # --- FIX 2: Install dependencies directly (pip install will now find requirements.txt) ---
-    # Azure App Service handles the full dependency build remotely (Oryx), but we install them here
-    # to ensure the build package is complete. Since the working directory is set above, this works.
-    - name: Install dependencies and prepare artifact
+    # FIX: pip install now runs successfully inside ./photos-app-master
+    - name: Install dependencies
       run: |
         python -m pip install --upgrade pip
         pip install -r requirements.txt
     
-    # --- FIX 3: Artifact upload needs to be explicit ---
+    # FIX: Artifact upload targets the entire subfolder contents for deployment
     - name: Upload artifact for deployment job
       uses: actions/upload-artifact@v3
       with:
-        # Uploads the content of the photos-app-master folder
         name: python-app
         path: ${{ github.workspace }}/photos-app-master
-
+        
   deploy:
+    permissions:
+      contents: none
     runs-on: ubuntu-latest
     needs: build
     environment:
+      # NOTE: This environment name will be specific to your Azure setup
+      name: 'production' 
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
@@ -63,17 +63,16 @@ jobs:
       uses: actions/download-artifact@v3
       with:
         name: python-app
-    
-    # --- You still need to resolve the insufficient privileges error here ---
+        
+    # -------------------------------------------------------------
+    # NOTE: You MUST resolve the "Insufficient privileges" error 
+    # The secret name must be copied exactly from your GitHub settings.
+    # -------------------------------------------------------------
     - name: 'Deploy to Azure Web App'
       id: deploy-to-webapp
       uses: azure/webapps-deploy@v2
       with:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         slot-name: 'production'
-        # The secret below is what failed due to Entra ID privilege issues earlier
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }} # <--- Replace with your exact secret name
         package: .
-
-
-
