@@ -66,6 +66,7 @@ jobs:
         app-name: ${{ env.AZURE_WEBAPP_NAME }}
         slot-name: 'production'
         # The secret below is what failed due to Entra ID privilege issues earlier
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_PUBLISHPROFILE_PHOTOSAPPSERVICE }}
+        publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }}
         package: .
+
 
