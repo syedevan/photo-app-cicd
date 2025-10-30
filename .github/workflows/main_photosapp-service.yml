@@ -1,9 +1,13 @@
-name: Build and deploy Python app to Azure Web App - photosapp-service
+# This is the top-level workflow name
+name: Build and deploy Python app to Azure web App - photosapp-service
+
+# The env block needs to be indented correctly if it is nested under a job, 
+# but for global settings, it should be at the top level, as below:
 
 env:
-  AZURE_WEBAPP_NAME: photosapp-service      # Change this if your App Service name is different
-  PYTHON_VERSION: '3.11'                    # Recommended Python version for Azure
-  AZURE_WEBAPP_PACKAGE_PATH: '.'            # Deploy the whole working directory
+  AZURE_WEBAPP_NAME: photosapp-service       # Your App Service Name
+  PYTHON_VERSION: '3.11'                     # Recommended Python version
+  AZURE_WEBAPP_PACKAGE_PATH: '.'             # Deploy the whole working directory
   STARTUP_COMMAND: 'gunicorn --bind 0.0.0.0 "photos:app"' # Linux command for Flask
 
 on:
@@ -11,6 +15,8 @@ on:
     branches:
       - main
   workflow_dispatch:
+
+# ... the rest of the file follows (jobs: build: ...)
 
 jobs:
   build:
@@ -68,5 +74,6 @@ jobs:
         # The secret below is what failed due to Entra ID privilege issues earlier
         publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }}
         package: .
+
 
 
