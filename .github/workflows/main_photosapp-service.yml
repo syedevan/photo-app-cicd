@@ -1,79 +1,79 @@
-name: Build and deploy Python app to Azure Web App - photosapp-service
+trigger:
+- main # Trigger the pipeline on pushes to the 'main' branch
 
-env:
-  # --- AZURE SETTINGS (Change these if your Web App name or Python version change) ---
-  AZURE_WEBAPP_NAME: photosapp-service
-  PYTHON_VERSION: '3.11'
-  
-  # --- DEPLOYMENT SETTINGS ---
-  AZURE_WEBAPP_PACKAGE_PATH: '.'                 # Deploy the whole artifact package
-  STARTUP_COMMAND: 'gunicorn --bind 0.0.0.0 "photos:app"' # Linux command for Flask
-  
-on:
-  push:
-    branches:
-      - main
-  workflow_dispatch:
+variables:
+  # 1. Update with the service connection name you created in Azure DevOps
+  azureServiceConnection: 'Azure-Flask-Conn' 
+  # 2. Your App Service Name
+  webAppName: 'python-flask-webapp-quicklabs' 
+  # 3. Your Resource Group Name
+  resourceGroupName: 'python-flask-webapp-rg'
+  pythonVersion: '3.11'
+  vmImageName: 'ubuntu-latest'
 
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    
-    # -------------------------------------------------------------
-    # FIX: Set the working directory for the build steps 
-    # This is crucial because your files are in the nested 'photos-app-master' folder.
-    # -------------------------------------------------------------
-    defaults:
-      run:
-        working-directory: ./photos-app-master # <-- Fixes the "requirements.txt not found" error
-
+stages:
+- stage: Build
+  displayName: Build and Package
+  jobs:
+  - job: BuildJob
+    pool:
+      vmImage: $(vmImageName)
     steps:
-    - uses: actions/checkout@v4
-
-    - name: Set up Python version
-      uses: actions/setup-python@v4
-      with:
-        python-version: ${{ env.PYTHON_VERSION }}
-
-    # FIX: pip install now runs successfully inside ./photos-app-master
-    - name: Install dependencies
-      run: |
-        python -m pip install --upgrade pip
+    
+    - task: UsePythonVersion@0
+      displayName: 'Use Python $(pythonVersion)'
+      inputs:
+        versionSpec: '$(pythonVersion)'
+        
+    - script: |
+        # Simple installation; the deployment task handles the virtual environment
+        pip install --upgrade pip
         pip install -r requirements.txt
-    
-    # FIX: Artifact upload targets the entire subfolder contents for deployment
-    - name: Upload artifact for deployment job
-      uses: actions/upload-artifact@v4
-      with:
-        name: python-app
-        path: ${{ github.workspace }}/photos-app-master
-        
-  deploy:
-    permissions:
-      contents: none
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      # NOTE: This environment name will be specific to your Azure setup
-      name: 'production' 
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
+      displayName: 'Install Dependencies'
+      
+    - task: ArchiveFiles@2
+      displayName: 'Archive Files for Deployment'
+      inputs:
+        rootFolderOrFile: '$(System.DefaultWorkingDirectory)'
+        # Crucial: archives the content of the repo root, excluding the root directory itself
+        includeRootFolder: false 
+        archiveType: 'zip'
+        archiveFile: '$(Build.ArtifactStagingDirectory)/$(Build.BuildId).zip'
+        replaceExistingArchive: true
 
-    steps:
-    - name: Download artifact from build job
-      uses: actions/download-artifact@v3
-      with:
-        name: python-app
-        
-    # -------------------------------------------------------------
-    # NOTE: You MUST resolve the "Insufficient privileges" error 
-    # The secret name must be copied exactly from your GitHub settings.
-    # -------------------------------------------------------------
-    - name: 'Deploy to Azure Web App'
-      id: deploy-to-webapp
-      uses: azure/webapps-deploy@v2
-      with:
-        app-name: ${{ env.AZURE_WEBAPP_NAME }}
-        slot-name: 'production'
-        publish-profile: ${{ secrets.AZUREAPPSERVICE_CLIENTID_90D42CA6CD644F4B82D7C8B7B0DB7A5C }} # <--- Replace with your exact secret name
-        package: .
+    - task: PublishBuildArtifacts@1
+      displayName: 'Publish Artifact'
+      inputs:
+        PathtoPublish: '$(Build.ArtifactStagingDirectory)'
+        ArtifactName: 'drop'
 
+- stage: Deploy
+  displayName: Deploy to Azure WebApp
+  dependsOn: Build
+  condition: succeeded()
+  jobs:
+  - deployment: DeploymentJob
+    displayName: Deploy WebApp
+    environment: 'Production'
+    pool:
+      vmImage: $(vmImageName)
+    strategy:
+      runOnce:
+        deploy:
+          steps:
+          
+          - task: DownloadPipelineArtifact@2
+            displayName: 'Download Artifact'
+            inputs:
+              artifactName: 'drop'
+              targetPath: '$(System.DefaultWorkingDirectory)'
+              
+          - task: AzureWebApp@1
+            displayName: 'Deploy Azure Web App'
+            inputs:
+              azureSubscription: '$(azureServiceConnection)'
+              appName: '$(webAppName)'
+              resourceGroupName: '$(resourceGroupName)'
+              package: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
+              # CRITICAL: Startup command for Flask on Linux App Service
+              startUpCommand: 'gunicorn --bind=0.0.0.0 --workers 2 photos:app'
