@@ -1,0 +1,406 @@
+2025-10-31T13:11:45.3639882Z    _____                               
+2025-10-31T13:11:45.3641104Z   /  _  \ __________ _________   ____  
+2025-10-31T13:11:45.3641137Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:11:45.3641201Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:11:45.3641219Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:11:45.3641241Z         \/      \/                  \/ 
+2025-10-31T13:11:45.3641259Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:11:45.3641275Z 
+2025-10-31T13:11:45.3641297Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:11:45.3641326Z Python 3.11.13
+2025-10-31T13:11:45.3641344Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:11:46.6020291Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:11:46.6222284Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:11:46.6743410Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:11:54.7184791Z 4 added, 0 removed; done.
+2025-10-31T13:11:54.7185252Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:11:54.7585340Z done.
+2025-10-31T13:11:54.8009328Z CA certificates copied and updated successfully.
+2025-10-31T13:11:54.9811352Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:11:55.7008951Z Starting periodic command scheduler: cron.
+2025-10-31T13:11:55.7111433Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:11:56.0111106Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:11:56.0309376Z Build Operation ID: 1400313a5af76240
+2025-10-31T13:11:56.0789037Z Output is compressed. Extracting it...
+2025-10-31T13:11:56.0789647Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:11:56.1216271Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de187ced1bf7dc'...
+2025-10-31T13:12:04.1448036Z App path is set to '/tmp/8de187ced1bf7dc'
+2025-10-31T13:12:04.6315289Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:12:05.6129039Z Using packages from virtual environment antenv located at /tmp/8de187ced1bf7dc/antenv.
+2025-10-31T13:12:05.6143291Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de187ced1bf7dc/antenv/lib/python3.11/site-packages'
+2025-10-31T13:12:07.6035428Z 
+2025-10-31T13:12:07.6036020Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:12:07.6036060Z 
+2025-10-31T13:12:07.6036085Z [Traceback (most recent call last):
+2025-10-31T13:12:07.6036121Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:12:07.6036148Z     import gevent
+2025-10-31T13:12:07.6036172Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:12:07.6036247Z 
+2025-10-31T13:12:07.6036271Z During handling of the above exception, another exception occurred:
+2025-10-31T13:12:07.6036291Z 
+2025-10-31T13:12:07.6036312Z Traceback (most recent call last):
+2025-10-31T13:12:07.6036335Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:12:07.6036356Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:12:07.6036377Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:12:07.6036412Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:12:07.6036435Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:12:07.6036457Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:12:07.6036499Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:12:07.6036524Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:12:07.6036555Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:12:07.6036577Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:12:07.6036598Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:12:07.6036621Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:12:07.6036645Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:12:07.6036667Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:12:07.6036701Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:12:07.6036720Z ]
+2025-10-31T13:12:07.6139734Z 
+2025-10-31T13:13:34.932805091Z    _____                               
+2025-10-31T13:13:34.933458928Z   /  _  \ __________ _________   ____  
+2025-10-31T13:13:34.933461934Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:13:34.933463673Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:13:34.933465180Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:13:34.933466847Z         \/      \/                  \/ 
+2025-10-31T13:13:34.933468348Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:13:34.933469769Z 
+2025-10-31T13:13:34.933471144Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:13:34.933472553Z Python 3.11.13
+2025-10-31T13:13:34.933473890Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:13:36.512105581Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:13:36.532227284Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:13:36.631695684Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:13:44.455127491Z 4 added, 0 removed; done.
+2025-10-31T13:13:44.465310595Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:13:44.474385427Z done.
+2025-10-31T13:13:44.485350016Z CA certificates copied and updated successfully.
+2025-10-31T13:13:44.644729168Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:13:44.645885101Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:13:44.744390670Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:13:44.761346501Z Build Operation ID: 1400313a5af76240
+2025-10-31T13:13:44.771262568Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:13:44.772399215Z Output is compressed. Extracting it...
+2025-10-31T13:13:44.780311980Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de187ced1bf7dc'...
+2025-10-31T13:13:48.491168231Z App path is set to '/tmp/8de187ced1bf7dc'
+2025-10-31T13:13:48.731913707Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:13:48.853327112Z Using packages from virtual environment antenv located at /tmp/8de187ced1bf7dc/antenv.
+2025-10-31T13:13:48.853343884Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de187ced1bf7dc/antenv/lib/python3.11/site-packages'
+2025-10-31T13:13:49.343748452Z 
+2025-10-31T13:13:49.343778678Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:13:49.343781511Z 
+2025-10-31T13:13:49.343783336Z [Traceback (most recent call last):
+2025-10-31T13:13:49.343785181Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:13:49.343797835Z     import gevent
+2025-10-31T13:13:49.343799710Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:13:49.343801207Z 
+2025-10-31T13:13:49.343802495Z During handling of the above exception, another exception occurred:
+2025-10-31T13:13:49.343803975Z 
+2025-10-31T13:13:49.343805246Z Traceback (most recent call last):
+2025-10-31T13:13:49.343806565Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:13:49.343808016Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:13:49.343809422Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:13:49.343810781Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:13:49.343812280Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:13:49.343813630Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:13:49.343815301Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:13:49.343816898Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:13:49.343821353Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:13:49.343822846Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:13:49.343824271Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:13:49.343825788Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:13:49.343827305Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:13:49.343828816Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:13:49.343830320Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:13:49.343831778Z ]
+2025-10-31T13:13:49.352445875Z 
+
+2025-10-31T13:16:23.542001325Z    _____                               
+2025-10-31T13:16:23.542043578Z   /  _  \ __________ _________   ____  
+2025-10-31T13:16:23.542046261Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:16:23.542048300Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:16:23.542050263Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:16:23.542052617Z         \/      \/                  \/ 
+2025-10-31T13:16:23.542054495Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:16:23.542056241Z 
+2025-10-31T13:16:23.542057876Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:16:23.542059652Z Python 3.11.13
+2025-10-31T13:16:23.542061367Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:16:25.460424553Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:16:25.489877654Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:16:25.568287642Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:16:35.647376848Z 4 added, 0 removed; done.
+2025-10-31T13:16:35.655344028Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:16:35.657289545Z done.
+2025-10-31T13:16:35.686376807Z CA certificates copied and updated successfully.
+2025-10-31T13:16:35.797375309Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:16:35.805633649Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:16:35.875091899Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:16:35.876942160Z Build Operation ID: 1400313a5af76240
+2025-10-31T13:16:35.878202983Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:16:35.878464538Z Output is compressed. Extracting it...
+2025-10-31T13:16:35.878990382Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de187ced1bf7dc'...
+2025-10-31T13:16:38.936922654Z App path is set to '/tmp/8de187ced1bf7dc'
+2025-10-31T13:16:39.328701229Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:16:39.450057034Z Using packages from virtual environment antenv located at /tmp/8de187ced1bf7dc/antenv.
+2025-10-31T13:16:39.459386097Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de187ced1bf7dc/antenv/lib/python3.11/site-packages'
+2025-10-31T13:16:40.320692097Z 
+2025-10-31T13:16:40.320714157Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:16:40.320727113Z 
+2025-10-31T13:16:40.320729271Z [Traceback (most recent call last):
+2025-10-31T13:16:40.320731271Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:16:40.320745502Z     import gevent
+2025-10-31T13:16:40.320747093Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:16:40.320748473Z 
+2025-10-31T13:16:40.320749809Z During handling of the above exception, another exception occurred:
+2025-10-31T13:16:40.320751268Z 
+2025-10-31T13:16:40.320752511Z Traceback (most recent call last):
+2025-10-31T13:16:40.320753829Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:16:40.320755386Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:16:40.320756731Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:16:40.320758154Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:16:40.320759613Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:16:40.320760962Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:16:40.320762336Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:16:40.320763953Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:16:40.320765569Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:16:40.320766995Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:16:40.320768370Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:16:40.320769973Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:16:40.320771404Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:16:40.320772972Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:16:40.320774459Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:16:40.320775835Z ]
+2025-10-31T13:16:40.341020725Z 
+
+2025-10-31T13:16:49.075174211Z    _____                               
+2025-10-31T13:16:49.075203345Z   /  _  \ __________ _________   ____  
+2025-10-31T13:16:49.075205472Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:16:49.075207078Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:16:49.075208627Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:16:49.075210345Z         \/      \/                  \/ 
+2025-10-31T13:16:49.075211796Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:16:49.082405588Z 
+2025-10-31T13:16:49.082409468Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:16:49.082411221Z Python 3.11.13
+2025-10-31T13:16:49.082412940Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:16:52.358202428Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:16:52.378194975Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:16:52.426125931Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:17:00.276598361Z 4 added, 0 removed; done.
+2025-10-31T13:17:00.276999898Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:17:00.294989202Z done.
+2025-10-31T13:17:00.305309280Z CA certificates copied and updated successfully.
+2025-10-31T13:17:00.496705798Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:17:00.504165029Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:17:00.533986449Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:17:00.535450562Z Build Operation ID: 1400313a5af76240
+2025-10-31T13:17:00.545339500Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:17:00.546589669Z Output is compressed. Extracting it...
+2025-10-31T13:17:00.554337648Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de187ced1bf7dc'...
+2025-10-31T13:17:04.281875461Z App path is set to '/tmp/8de187ced1bf7dc'
+2025-10-31T13:17:04.465445483Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:17:04.566261984Z Using packages from virtual environment antenv located at /tmp/8de187ced1bf7dc/antenv.
+2025-10-31T13:17:04.566462735Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de187ced1bf7dc/antenv/lib/python3.11/site-packages'
+2025-10-31T13:17:05.045082842Z 
+2025-10-31T13:17:05.045123088Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:17:05.045126201Z 
+2025-10-31T13:17:05.045128290Z [Traceback (most recent call last):
+2025-10-31T13:17:05.045130283Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:17:05.045141920Z     import gevent
+2025-10-31T13:17:05.045143697Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:17:05.045145063Z 
+2025-10-31T13:17:05.045146307Z During handling of the above exception, another exception occurred:
+2025-10-31T13:17:05.045147701Z 
+2025-10-31T13:17:05.045149015Z Traceback (most recent call last):
+2025-10-31T13:17:05.045150392Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:17:05.045151872Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:17:05.045153209Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:17:05.045154617Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:17:05.045156089Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:17:05.045157474Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:17:05.045158824Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:17:05.045160426Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:17:05.045161896Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:17:05.045163320Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:17:05.045164710Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:17:05.045166254Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:17:05.045167704Z   File "/opt/python/3.11.13/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:17:05.045169196Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:17:05.045170703Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:17:05.045172080Z ]
+2025-10-31T13:17:05.052198895Z 
+
+2025-10-31T13:28:32.210934120Z    _____                               
+2025-10-31T13:28:32.228725884Z   /  _  \ __________ _________   ____  
+2025-10-31T13:28:32.228734731Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:28:32.228737094Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:28:32.228739076Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:28:32.228741463Z         \/      \/                  \/ 
+2025-10-31T13:28:32.228743290Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:28:32.228745011Z 
+2025-10-31T13:28:32.228746680Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:28:32.228748451Z Python 3.11.13
+2025-10-31T13:28:32.228750240Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:28:33.838112470Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:28:33.868417031Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:28:33.960515062Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:28:41.766755518Z 4 added, 0 removed; done.
+2025-10-31T13:28:41.775850751Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:28:41.777194743Z done.
+2025-10-31T13:28:41.795120094Z CA certificates copied and updated successfully.
+2025-10-31T13:28:41.885689825Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:28:41.886459734Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:28:41.984795547Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:28:41.986705998Z Build Operation ID: efbc8527fb5f1547
+2025-10-31T13:28:41.993712773Z Output is compressed. Extracting it...
+2025-10-31T13:28:41.994155882Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:28:41.995071924Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de188123701567'...
+2025-10-31T13:28:44.791943737Z App path is set to '/tmp/8de188123701567'
+2025-10-31T13:28:44.962189752Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:28:45.231453645Z Using packages from virtual environment antenv located at /tmp/8de188123701567/antenv.
+2025-10-31T13:28:45.231469418Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de188123701567/antenv/lib/python3.11/site-packages'
+2025-10-31T13:28:46.133449655Z 
+2025-10-31T13:28:46.133466294Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:28:46.133468686Z 
+2025-10-31T13:28:46.133470503Z [Traceback (most recent call last):
+2025-10-31T13:28:46.133472450Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:28:46.133480756Z     import gevent
+2025-10-31T13:28:46.133482341Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:28:46.133483959Z 
+2025-10-31T13:28:46.133485336Z During handling of the above exception, another exception occurred:
+2025-10-31T13:28:46.133486728Z 
+2025-10-31T13:28:46.133487960Z Traceback (most recent call last):
+2025-10-31T13:28:46.133489299Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:28:46.133490884Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:28:46.133492526Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:28:46.133493904Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:28:46.133495432Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:28:46.133496887Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:28:46.133498214Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:28:46.133499774Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:28:46.133501198Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:28:46.133502693Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:28:46.133504066Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:28:46.133505507Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:28:46.133507007Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:28:46.133508583Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:28:46.133510065Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:28:46.133511441Z ]
+2025-10-31T13:28:46.142038575Z 
+
+2025-10-31T13:32:25.920757450Z    _____                               
+2025-10-31T13:32:25.920800164Z   /  _  \ __________ _________   ____  
+2025-10-31T13:32:25.920802908Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:32:25.920804941Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:32:25.920806789Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:32:25.920808898Z         \/      \/                  \/ 
+2025-10-31T13:32:25.920810708Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:32:25.920812533Z 
+2025-10-31T13:32:25.920814156Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:32:25.920816186Z Python 3.11.13
+2025-10-31T13:32:25.920817907Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:32:27.168450780Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:32:27.179585829Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:32:27.251373858Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:32:34.822873607Z 4 added, 0 removed; done.
+2025-10-31T13:32:34.832597071Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:32:34.861525163Z done.
+2025-10-31T13:32:34.873062291Z CA certificates copied and updated successfully.
+2025-10-31T13:32:34.962363807Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:32:34.963142558Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:32:35.163806264Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:32:35.173424424Z Build Operation ID: efbc8527fb5f1547
+2025-10-31T13:32:35.181306930Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:32:35.181853090Z Output is compressed. Extracting it...
+2025-10-31T13:32:35.191448809Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de188123701567'...
+2025-10-31T13:32:37.623091531Z App path is set to '/tmp/8de188123701567'
+2025-10-31T13:32:37.766854585Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:32:37.857897798Z Using packages from virtual environment antenv located at /tmp/8de188123701567/antenv.
+2025-10-31T13:32:37.857923081Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de188123701567/antenv/lib/python3.11/site-packages'
+2025-10-31T13:32:38.417901989Z 
+2025-10-31T13:32:38.417921070Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:32:38.417924102Z 
+2025-10-31T13:32:38.417926601Z [Traceback (most recent call last):
+2025-10-31T13:32:38.417938992Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:32:38.417950339Z     import gevent
+2025-10-31T13:32:38.417952543Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:32:38.417954332Z 
+2025-10-31T13:32:38.417955991Z During handling of the above exception, another exception occurred:
+2025-10-31T13:32:38.417957782Z 
+2025-10-31T13:32:38.417959353Z Traceback (most recent call last):
+2025-10-31T13:32:38.417961081Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:32:38.417962985Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:32:38.417964762Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:32:38.417966471Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:32:38.417968342Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:32:38.417970040Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:32:38.418334875Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:32:38.418337293Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:32:38.418339173Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:32:38.418340961Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:32:38.418342709Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:32:38.418344800Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:32:38.418346664Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:32:38.418348710Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:32:38.418350565Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:32:38.418352299Z ]
+2025-10-31T13:32:38.436216503Z 
+
+2025-10-31T13:37:10.516136125Z    _____                               
+2025-10-31T13:37:10.516658527Z   /  _  \ __________ _________   ____  
+2025-10-31T13:37:10.516665608Z  /  /_\  \\___   /  |  \_  __ \_/ __ \ 
+2025-10-31T13:37:10.516667654Z /    |    \/    /|  |  /|  | \/\  ___/ 
+2025-10-31T13:37:10.516669314Z \____|__  /_____ \____/ |__|    \___  >
+2025-10-31T13:37:10.516671229Z         \/      \/                  \/ 
+2025-10-31T13:37:10.516672830Z A P P   S E R V I C E   O N   L I N U X
+2025-10-31T13:37:10.516674239Z 
+2025-10-31T13:37:10.516675510Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:37:10.516676862Z Python 3.11.13
+2025-10-31T13:37:10.516678512Z Note: Any data outside '/home' is not persisted
+2025-10-31T13:37:12.204195936Z Starting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:37:12.326350315Z WEBSITES_INCLUDE_CLOUD_CERTS is not set to true.
+2025-10-31T13:37:12.407081568Z Updating certificates in /etc/ssl/certs...
+2025-10-31T13:37:26.957596194Z 4 added, 0 removed; done.
+2025-10-31T13:37:26.957618461Z Running hooks in /etc/ca-certificates/update.d...
+2025-10-31T13:37:26.957621381Z done.
+2025-10-31T13:37:26.958789710Z CA certificates copied and updated successfully.
+2025-10-31T13:37:27.090109585Z Site's appCommandLine: gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app
+2025-10-31T13:37:27.098261067Z Launching oryx with: create-script -appPath /home/site/wwwroot -output /opt/startup/startup.sh -virtualEnvName antenv -defaultApp /opt/defaultsite -userStartupCommand 'gunicorn --bind=0.0.0.0 --worker-class gevent --workers 2 photos:app'
+2025-10-31T13:37:27.218471435Z Found build manifest file at '/home/site/wwwroot/oryx-manifest.toml'. Deserializing it...
+2025-10-31T13:37:27.227538270Z Build Operation ID: efbc8527fb5f1547
+2025-10-31T13:37:27.229039778Z Output is compressed. Extracting it...
+2025-10-31T13:37:27.229621559Z Oryx Version: 0.2.20250709.3, Commit: 0cfb8cb7d114b65e539d2f9ccf9804e87b9966ba, ReleaseTagName: 20250709.3
+2025-10-31T13:37:27.248281970Z Extracting '/home/site/wwwroot/output.tar.gz' to directory '/tmp/8de188123701567'...
+2025-10-31T13:37:32.309039685Z App path is set to '/tmp/8de188123701567'
+2025-10-31T13:37:32.467674846Z Writing output script to '/opt/startup/startup.sh'
+2025-10-31T13:37:32.559976345Z Using packages from virtual environment antenv located at /tmp/8de188123701567/antenv.
+2025-10-31T13:37:32.559991811Z Updated PYTHONPATH to '/opt/startup/app_logs:/tmp/8de188123701567/antenv/lib/python3.11/site-packages'
+2025-10-31T13:37:33.117780640Z 
+2025-10-31T13:37:33.117846814Z Error: class uri 'gevent' invalid or not found: 
+2025-10-31T13:37:33.117850591Z 
+2025-10-31T13:37:33.117853167Z [Traceback (most recent call last):
+2025-10-31T13:37:33.117855777Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 12, in <module>
+2025-10-31T13:37:33.117875079Z     import gevent
+2025-10-31T13:37:33.117877714Z ModuleNotFoundError: No module named 'gevent'
+2025-10-31T13:37:33.117879688Z 
+2025-10-31T13:37:33.117881497Z During handling of the above exception, another exception occurred:
+2025-10-31T13:37:33.117883585Z 
+2025-10-31T13:37:33.117885344Z Traceback (most recent call last):
+2025-10-31T13:37:33.117887249Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/util.py", line 110, in load_class
+2025-10-31T13:37:33.117889391Z     mod = importlib.import_module('.'.join(components))
+2025-10-31T13:37:33.117897118Z           ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:37:33.117899187Z   File "/opt/python/3.11.13/lib/python3.11/importlib/__init__.py", line 126, in import_module
+2025-10-31T13:37:33.117901282Z     return _bootstrap._gcd_import(name[level:], package, level)
+2025-10-31T13:37:33.117903220Z            ^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^^
+2025-10-31T13:37:33.117905324Z   File "<frozen importlib._bootstrap>", line 1204, in _gcd_import
+2025-10-31T13:37:33.117907429Z   File "<frozen importlib._bootstrap>", line 1176, in _find_and_load
+2025-10-31T13:37:33.117909465Z   File "<frozen importlib._bootstrap>", line 1147, in _find_and_load_unlocked
+2025-10-31T13:37:33.117911490Z   File "<frozen importlib._bootstrap>", line 690, in _load_unlocked
+2025-10-31T13:37:33.117913544Z   File "<frozen importlib._bootstrap_external>", line 940, in exec_module
+2025-10-31T13:37:33.117915669Z   File "<frozen importlib._bootstrap>", line 241, in _call_with_frames_removed
+2025-10-31T13:37:33.117917721Z   File "/tmp/8de188123701567/antenv/lib/python3.11/site-packages/gunicorn/workers/ggevent.py", line 14, in <module>
+2025-10-31T13:37:33.117919861Z     raise RuntimeError("gevent worker requires gevent 1.4 or higher")
+2025-10-31T13:37:33.117922018Z RuntimeError: gevent worker requires gevent 1.4 or higher
+2025-10-31T13:37:33.117923986Z ]
+2025-10-31T13:37:33.117925826Z 
+

@@ -1,0 +1,982 @@
+2025-10-31T11:19:30.9836186Z Container start method called.
+2025-10-31T11:19:30.9837458Z Establishing network.
+2025-10-31T11:19:30.9838146Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T11:19:32.0888443Z Image appsvc/python:3.11_20250723.2.tuxprod is pulled from registry 10.1.0.4:13209
+2025-10-31T11:19:32.0892147Z Container is starting.
+2025-10-31T11:19:32.0895154Z Establishing user namespace if not established already.
+2025-10-31T11:19:32.0896812Z Establishing network if not established already.
+2025-10-31T11:19:32.0898932Z Mounting volumes.
+2025-10-31T11:19:32.0903808Z Nested mountpoint 
+2025-10-31T11:19:32.1194671Z Nested mountpoint volatile/logs
+2025-10-31T11:19:32.1584543Z Nested mountpoint 
+2025-10-31T11:19:32.3091177Z Nested mountpoint 
+2025-10-31T11:19:32.3194494Z Nested mountpoint 
+2025-10-31T11:19:32.9898495Z Creating container.
+2025-10-31T11:19:32.9900243Z Creating pipes for streaming container io.
+2025-10-31T11:19:32.9903685Z Creating stdout named pipe at /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stdout_f3f5898b8d004504bc8eb876f9c6fd27.
+2025-10-31T11:19:32.9908359Z Successfully created stdout named pipe at: /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stdout_f3f5898b8d004504bc8eb876f9c6fd27.
+2025-10-31T11:19:32.9916398Z Opening named pipe /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stdout_f3f5898b8d004504bc8eb876f9c6fd27 for reading in non-blocking mode.
+2025-10-31T11:19:32.9920907Z Successfully opened named pipe: /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stdout_f3f5898b8d004504bc8eb876f9c6fd27.
+2025-10-31T11:19:33.0001580Z Successfully removed non-blocking flag from /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stdout_f3f5898b8d004504bc8eb876f9c6fd27.
+2025-10-31T11:19:33.0008472Z Creating stderr named pipe at /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stderr_6898deba43cc4da191d9e0139bdfab0d.
+2025-10-31T11:19:33.0012346Z Successfully created stderr named pipe at: /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stderr_6898deba43cc4da191d9e0139bdfab0d.
+2025-10-31T11:19:33.0017518Z Opening named pipe /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stderr_6898deba43cc4da191d9e0139bdfab0d for reading in non-blocking mode.
+2025-10-31T11:19:33.0099419Z Successfully opened named pipe: /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stderr_6898deba43cc4da191d9e0139bdfab0d.
+2025-10-31T11:19:33.0102538Z Successfully removed non-blocking flag from /podr/container/pipe/fd4f20730dbe_python-flask-webapp-quicklabs/stderr_6898deba43cc4da191d9e0139bdfab0d.
+2025-10-31T11:19:33.0107076Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T11:19:33.5422015Z Starting container: fd4f20730dbe_python-flask-webapp-quicklabs.
+2025-10-31T11:19:33.6110685Z Starting watchers and probes.
+2025-10-31T11:19:33.6119553Z Starting metrics collection.
+2025-10-31T11:19:33.6124401Z Container is running.
+2025-10-31T11:19:33.7902373Z Container start method finished after 2806 ms.
+2025-10-31T11:19:48.0455704Z Site startup probe succeeded after 14.1571898 seconds.
+2025-10-31T11:19:48.1763983Z Site started.
+2025-10-31T11:19:48.2362128Z Site is running with patch version: 3.11.13
+2025-10-31T11:21:22.6293671Z Container start method called.
+2025-10-31T11:21:22.7367384Z Establishing network.
+2025-10-31T11:21:22.7389581Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T11:21:23.3784639Z Container is starting.
+2025-10-31T11:21:23.3785830Z Establishing user namespace if not established already.
+2025-10-31T11:21:23.3786411Z Establishing network if not established already.
+2025-10-31T11:21:23.3786893Z Mounting volumes.
+2025-10-31T11:21:23.3788732Z Nested mountpoint 
+2025-10-31T11:21:23.4977623Z Nested mountpoint volatile/logs
+2025-10-31T11:21:23.5173564Z Nested mountpoint 
+2025-10-31T11:21:23.5269298Z Nested mountpoint 
+2025-10-31T11:21:23.5386069Z Nested mountpoint 
+2025-10-31T11:21:24.8633160Z Creating container.
+2025-10-31T11:21:24.8668655Z Creating pipes for streaming container io.
+2025-10-31T11:21:24.8669395Z Creating stdout named pipe at /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stdout_2373fc27f2ef43af80112799f86d78b7.
+2025-10-31T11:21:24.8670749Z Successfully created stdout named pipe at: /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stdout_2373fc27f2ef43af80112799f86d78b7.
+2025-10-31T11:21:24.8671324Z Opening named pipe /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stdout_2373fc27f2ef43af80112799f86d78b7 for reading in non-blocking mode.
+2025-10-31T11:21:24.8671996Z Successfully opened named pipe: /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stdout_2373fc27f2ef43af80112799f86d78b7.
+2025-10-31T11:21:24.8672592Z Successfully removed non-blocking flag from /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stdout_2373fc27f2ef43af80112799f86d78b7.
+2025-10-31T11:21:24.8673185Z Creating stderr named pipe at /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stderr_4c87204ffca642ce94818c6cfe1c6063.
+2025-10-31T11:21:24.8674018Z Successfully created stderr named pipe at: /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stderr_4c87204ffca642ce94818c6cfe1c6063.
+2025-10-31T11:21:24.8674617Z Opening named pipe /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stderr_4c87204ffca642ce94818c6cfe1c6063 for reading in non-blocking mode.
+2025-10-31T11:21:24.8675252Z Successfully opened named pipe: /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stderr_4c87204ffca642ce94818c6cfe1c6063.
+2025-10-31T11:21:24.8675778Z Successfully removed non-blocking flag from /podr/container/pipe/bcc48c5afeb8_python-flask-webapp-quicklabs/stderr_4c87204ffca642ce94818c6cfe1c6063.
+2025-10-31T11:21:24.8676430Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T11:21:25.7542612Z Starting container: bcc48c5afeb8_python-flask-webapp-quicklabs.
+2025-10-31T11:21:26.3537455Z Starting watchers and probes.
+2025-10-31T11:21:26.3541682Z Starting metrics collection.
+2025-10-31T11:21:26.3543135Z Container is running.
+2025-10-31T11:21:26.9101416Z Container start method finished after 4183 ms.
+2025-10-31T11:21:53.4203950Z Site startup probe succeeded after 26.5091343 seconds.
+2025-10-31T11:21:53.5002827Z Site started.
+2025-10-31T11:21:53.5013029Z Site is running with patch version: 3.11.13
+2025-10-31T11:22:14.5311564Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T11:22:15.1320176Z Stop and delete container. Retry count = 0
+2025-10-31T11:22:15.2206627Z Stopping container: fd4f20730dbe_python-flask-webapp-quicklabs.
+2025-10-31T11:22:20.6790546Z Deleting container: fd4f20730dbe_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T11:22:21.4689388Z Container spec TerminationMessagePolicy  path 
+2025-10-31T11:22:21.5070688Z Container is terminated. Total time elapsed: 6955 ms.
+2025-10-31T11:22:21.5185186Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T11:29:24.9303439Z Container start method called.
+2025-10-31T11:29:24.9318059Z Establishing network.
+2025-10-31T11:29:24.9401476Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T11:29:26.4207351Z Container is starting.
+2025-10-31T11:29:26.4295235Z Establishing user namespace if not established already.
+2025-10-31T11:29:26.4298399Z Establishing network if not established already.
+2025-10-31T11:29:26.4299505Z Mounting volumes.
+2025-10-31T11:29:26.4390019Z Nested mountpoint 
+2025-10-31T11:29:26.5103588Z Nested mountpoint volatile/logs
+2025-10-31T11:29:26.5289776Z Nested mountpoint 
+2025-10-31T11:29:26.5398521Z Nested mountpoint 
+2025-10-31T11:29:26.6890834Z Nested mountpoint 
+2025-10-31T11:29:27.6484166Z Creating container.
+2025-10-31T11:29:27.6490778Z Creating pipes for streaming container io.
+2025-10-31T11:29:27.6500879Z Creating stdout named pipe at /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stdout_a6ee85edeb0944c6b79c02150ddec409.
+2025-10-31T11:29:27.6977004Z Successfully created stdout named pipe at: /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stdout_a6ee85edeb0944c6b79c02150ddec409.
+2025-10-31T11:29:27.6979105Z Opening named pipe /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stdout_a6ee85edeb0944c6b79c02150ddec409 for reading in non-blocking mode.
+2025-10-31T11:29:27.6980178Z Successfully opened named pipe: /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stdout_a6ee85edeb0944c6b79c02150ddec409.
+2025-10-31T11:29:27.6980781Z Successfully removed non-blocking flag from /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stdout_a6ee85edeb0944c6b79c02150ddec409.
+2025-10-31T11:29:27.6981454Z Creating stderr named pipe at /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stderr_ee09702db77e455b9d3d8ec395a3c845.
+2025-10-31T11:29:27.6982469Z Successfully created stderr named pipe at: /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stderr_ee09702db77e455b9d3d8ec395a3c845.
+2025-10-31T11:29:27.6983004Z Opening named pipe /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stderr_ee09702db77e455b9d3d8ec395a3c845 for reading in non-blocking mode.
+2025-10-31T11:29:27.6983636Z Successfully opened named pipe: /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stderr_ee09702db77e455b9d3d8ec395a3c845.
+2025-10-31T11:29:27.6984217Z Successfully removed non-blocking flag from /podr/container/pipe/db80d4cea8b6_python-flask-webapp-quicklabs/stderr_ee09702db77e455b9d3d8ec395a3c845.
+2025-10-31T11:29:27.7079211Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T11:29:28.4649586Z Starting container: db80d4cea8b6_python-flask-webapp-quicklabs.
+2025-10-31T11:29:28.5377569Z Starting watchers and probes.
+2025-10-31T11:29:28.5534332Z Starting metrics collection.
+2025-10-31T11:29:28.5637275Z Container is running.
+2025-10-31T11:29:28.8444439Z Container start method finished after 3913 ms.
+2025-10-31T11:29:49.1999989Z Site startup probe succeeded after 20.2935509 seconds.
+2025-10-31T11:29:50.2567782Z Site is running with deployment version: ccba02dd-ea18-4d33-accb-4e065ab9cbee
+2025-10-31T11:29:50.2572306Z Site started.
+2025-10-31T11:29:50.2679937Z Site is running with patch version: 3.11.13
+2025-10-31T11:30:10.3607192Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T11:30:10.4106834Z Stop and delete container. Retry count = 0
+2025-10-31T11:30:10.4217219Z Stopping container: bcc48c5afeb8_python-flask-webapp-quicklabs.
+2025-10-31T11:30:15.5985125Z Deleting container: bcc48c5afeb8_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T11:30:15.8797440Z Container spec TerminationMessagePolicy  path 
+2025-10-31T11:30:15.8808941Z Container is terminated. Total time elapsed: 5518 ms.
+2025-10-31T11:30:15.8816946Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T12:57:47.0073195Z Container start method called.
+2025-10-31T12:57:47.0090813Z Establishing network.
+2025-10-31T12:57:47.0099419Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T12:57:47.5796905Z Container is starting.
+2025-10-31T12:57:47.5870087Z Establishing user namespace if not established already.
+2025-10-31T12:57:47.5872820Z Establishing network if not established already.
+2025-10-31T12:57:47.5874207Z Mounting volumes.
+2025-10-31T12:57:47.5900144Z Nested mountpoint 
+2025-10-31T12:57:47.5991107Z Nested mountpoint volatile/logs
+2025-10-31T12:57:47.6089049Z Nested mountpoint 
+2025-10-31T12:57:47.6895631Z Nested mountpoint 
+2025-10-31T12:57:47.7574431Z Nested mountpoint 
+2025-10-31T12:57:48.2782818Z Creating container.
+2025-10-31T12:57:48.2784040Z Creating pipes for streaming container io.
+2025-10-31T12:57:48.2786036Z Creating stdout named pipe at /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stdout_b4068085dc3e4ed1834c8a941bfef54c.
+2025-10-31T12:57:48.2866747Z Successfully created stdout named pipe at: /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stdout_b4068085dc3e4ed1834c8a941bfef54c.
+2025-10-31T12:57:48.2870709Z Opening named pipe /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stdout_b4068085dc3e4ed1834c8a941bfef54c for reading in non-blocking mode.
+2025-10-31T12:57:48.2878024Z Successfully opened named pipe: /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stdout_b4068085dc3e4ed1834c8a941bfef54c.
+2025-10-31T12:57:48.2882698Z Successfully removed non-blocking flag from /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stdout_b4068085dc3e4ed1834c8a941bfef54c.
+2025-10-31T12:57:48.2885112Z Creating stderr named pipe at /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stderr_129120f0b4a74edfa7ab9b45a872224a.
+2025-10-31T12:57:48.2892354Z Successfully created stderr named pipe at: /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stderr_129120f0b4a74edfa7ab9b45a872224a.
+2025-10-31T12:57:48.2894711Z Opening named pipe /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stderr_129120f0b4a74edfa7ab9b45a872224a for reading in non-blocking mode.
+2025-10-31T12:57:48.2967472Z Successfully opened named pipe: /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stderr_129120f0b4a74edfa7ab9b45a872224a.
+2025-10-31T12:57:48.2972315Z Successfully removed non-blocking flag from /podr/container/pipe/71099578cc04_python-flask-webapp-quicklabs/stderr_129120f0b4a74edfa7ab9b45a872224a.
+2025-10-31T12:57:48.2983646Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T12:57:48.8073548Z Starting container: 71099578cc04_python-flask-webapp-quicklabs.
+2025-10-31T12:57:48.8808761Z Starting watchers and probes.
+2025-10-31T12:57:48.8823400Z Starting metrics collection.
+2025-10-31T12:57:48.8827294Z Container is running.
+2025-10-31T12:57:49.6406987Z Container start method finished after 2625 ms.
+2025-10-31T12:58:17.4944117Z Site startup probe succeeded after 27.7828772 seconds.
+2025-10-31T12:58:17.6435976Z Site is running with deployment version: 9308c08f-35f1-4bb2-a3fb-604e3823d9c7
+2025-10-31T12:58:17.6444392Z Site started.
+2025-10-31T12:58:17.6539973Z Site is running with patch version: 3.11.13
+2025-10-31T12:58:37.7435283Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T12:58:37.7730533Z Stop and delete container. Retry count = 0
+2025-10-31T12:58:37.7741723Z Stopping container: db80d4cea8b6_python-flask-webapp-quicklabs.
+2025-10-31T12:58:42.8695461Z Deleting container: db80d4cea8b6_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T12:58:43.1914495Z Container spec TerminationMessagePolicy  path 
+2025-10-31T12:58:43.1964859Z Container is terminated. Total time elapsed: 5451 ms.
+2025-10-31T12:58:43.1976974Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T13:08:16.9468143Z Container start method called.
+2025-10-31T13:08:16.9474291Z Establishing network.
+2025-10-31T13:08:16.9668654Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T13:08:17.6360332Z Container is starting.
+2025-10-31T13:08:17.6369998Z Establishing user namespace if not established already.
+2025-10-31T13:08:17.6372188Z Establishing network if not established already.
+2025-10-31T13:08:17.6377224Z Mounting volumes.
+2025-10-31T13:08:17.6454022Z Nested mountpoint 
+2025-10-31T13:08:17.6473301Z Nested mountpoint volatile/logs
+2025-10-31T13:08:17.6665939Z Nested mountpoint 
+2025-10-31T13:08:17.6747101Z Nested mountpoint 
+2025-10-31T13:08:17.6752025Z Nested mountpoint 
+2025-10-31T13:08:18.7648647Z Creating container.
+2025-10-31T13:08:18.7649361Z Creating pipes for streaming container io.
+2025-10-31T13:08:18.7649894Z Creating stdout named pipe at /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stdout_cef9401df119471298222213d16b49e1.
+2025-10-31T13:08:18.7651121Z Successfully created stdout named pipe at: /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stdout_cef9401df119471298222213d16b49e1.
+2025-10-31T13:08:18.7651624Z Opening named pipe /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stdout_cef9401df119471298222213d16b49e1 for reading in non-blocking mode.
+2025-10-31T13:08:18.7652263Z Successfully opened named pipe: /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stdout_cef9401df119471298222213d16b49e1.
+2025-10-31T13:08:18.7652715Z Successfully removed non-blocking flag from /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stdout_cef9401df119471298222213d16b49e1.
+2025-10-31T13:08:18.7653207Z Creating stderr named pipe at /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stderr_2611eb6388ae46488d42b03515984073.
+2025-10-31T13:08:18.7653904Z Successfully created stderr named pipe at: /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stderr_2611eb6388ae46488d42b03515984073.
+2025-10-31T13:08:18.7654368Z Opening named pipe /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stderr_2611eb6388ae46488d42b03515984073 for reading in non-blocking mode.
+2025-10-31T13:08:18.7654876Z Successfully opened named pipe: /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stderr_2611eb6388ae46488d42b03515984073.
+2025-10-31T13:08:18.7655353Z Successfully removed non-blocking flag from /podr/container/pipe/e216a4af946b_python-flask-webapp-quicklabs/stderr_2611eb6388ae46488d42b03515984073.
+2025-10-31T13:08:18.7655908Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.4:13209 and fully qualified image name: 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:08:19.9833654Z Starting container: e216a4af946b_python-flask-webapp-quicklabs.
+2025-10-31T13:08:20.5637441Z Starting watchers and probes.
+2025-10-31T13:08:20.5645043Z Starting metrics collection.
+2025-10-31T13:08:20.5648580Z Container is running.
+2025-10-31T13:08:20.8543354Z Container start method finished after 3907 ms.
+2025-10-31T13:08:52.3731113Z Container has finished running with exit code: 1.
+2025-10-31T13:08:52.3808841Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T13:08:52.4014928Z Stop and delete container. Retry count = 0
+2025-10-31T13:08:52.4019876Z Stopping container: e216a4af946b_python-flask-webapp-quicklabs.
+2025-10-31T13:08:52.7126465Z Deleting container: e216a4af946b_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T13:08:53.3447515Z Container spec TerminationMessagePolicy  path 
+2025-10-31T13:08:53.3529461Z Container is terminated. Total time elapsed: 970 ms.
+2025-10-31T13:08:53.3536152Z Site container: python-flask-webapp-quicklabs terminated during site startup.
+2025-10-31T13:08:53.3724820Z Site startup probe failed after 32.5062711 seconds.
+2025-10-31T13:08:53.4365673Z Failed to start site. Revert by stopping site.
+2025-10-31T13:08:53.4470213Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T13:09:14.6381772Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T13:09:14.7280426Z Stop and delete container. Retry count = 0
+2025-10-31T13:09:14.7290268Z Stopping container: 71099578cc04_python-flask-webapp-quicklabs.
+2025-10-31T13:09:19.8685223Z Deleting container: 71099578cc04_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T13:09:20.2581963Z Container spec TerminationMessagePolicy  path 
+2025-10-31T13:09:20.2591733Z Container is terminated. Total time elapsed: 5619 ms.
+2025-10-31T13:09:20.2662792Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T13:11:43.2437562Z Container start method called.
+2025-10-31T13:11:43.3115137Z Establishing network.
+2025-10-31T13:11:43.3121293Z Pulling image: appsvc/python:3.11_20250723.2.tuxprod.
+2025-10-31T13:11:43.5324456Z Container is starting.
+2025-10-31T13:11:43.5333436Z Establishing user namespace if not established already.
+2025-10-31T13:11:43.5334667Z Establishing network if not established already.
+2025-10-31T13:11:43.5335285Z Mounting volumes.
+2025-10-31T13:11:43.5336270Z Nested mountpoint 
+2025-10-31T13:11:43.5530763Z Nested mountpoint volatile/logs
+2025-10-31T13:11:43.5930363Z Nested mountpoint 
+2025-10-31T13:11:43.6331673Z Nested mountpoint 
+2025-10-31T13:11:43.6923349Z Nested mountpoint 
+2025-10-31T13:11:44.2537387Z Creating container.
+2025-10-31T13:11:44.2545711Z Creating pipes for streaming container io.
+2025-10-31T13:11:44.2546259Z Creating stdout named pipe at /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stdout_c691294f0ba049c8b798ed7f8b952d48.
+2025-10-31T13:11:44.2547358Z Successfully created stdout named pipe at: /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stdout_c691294f0ba049c8b798ed7f8b952d48.
+2025-10-31T13:11:44.2547845Z Opening named pipe /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stdout_c691294f0ba049c8b798ed7f8b952d48 for reading in non-blocking mode.
+2025-10-31T13:11:44.2548400Z Successfully opened named pipe: /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stdout_c691294f0ba049c8b798ed7f8b952d48.
+2025-10-31T13:11:44.3231195Z Successfully removed non-blocking flag from /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stdout_c691294f0ba049c8b798ed7f8b952d48.
+2025-10-31T13:11:44.3244588Z Creating stderr named pipe at /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stderr_d4f131b3ba0248469c3a9125200eacf3.
+2025-10-31T13:11:44.3248642Z Successfully created stderr named pipe at: /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stderr_d4f131b3ba0248469c3a9125200eacf3.
+2025-10-31T13:11:44.3526483Z Opening named pipe /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stderr_d4f131b3ba0248469c3a9125200eacf3 for reading in non-blocking mode.
+2025-10-31T13:11:44.3540102Z Successfully opened named pipe: /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stderr_d4f131b3ba0248469c3a9125200eacf3.
+2025-10-31T13:11:44.3620473Z Successfully removed non-blocking flag from /podr/container/pipe/525ca8a81ae1_python-flask-webapp-quicklabs/stderr_d4f131b3ba0248469c3a9125200eacf3.
+2025-10-31T13:11:44.3621789Z Creating container with image: appsvc/python:3.11_20250723.2.tuxprod from registry: 10.1.0.5:13209 and fully qualified image name: 10.1.0.5:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:11:44.8427079Z Starting container: 525ca8a81ae1_python-flask-webapp-quicklabs.
+2025-10-31T13:11:44.9222865Z Starting watchers and probes.
+2025-10-31T13:11:44.9327731Z Starting metrics collection.
+2025-10-31T13:11:44.9330155Z Container is running.
+2025-10-31T13:11:45.1326563Z Container start method finished after 1829 ms.
+2025-10-31T13:12:07.8240880Z Container has finished running with exit code: 1.
+2025-10-31T13:12:07.8331673Z Container is terminating. Grace period: 5 seconds.
+2025-10-31T13:12:07.8623573Z Stop and delete container. Retry count = 0
+2025-10-31T13:12:07.8625432Z Stopping container: 525ca8a81ae1_python-flask-webapp-quicklabs.
+2025-10-31T13:12:07.9141128Z Deleting container: 525ca8a81ae1_python-flask-webapp-quicklabs. Retry count = 0
+2025-10-31T13:12:09.0535933Z Container spec TerminationMessagePolicy  path 
+2025-10-31T13:12:09.0552902Z Container is terminated. Total time elapsed: 1221 ms.
+2025-10-31T13:12:09.0738520Z Site container: python-flask-webapp-quicklabs terminated during site startup.
+2025-10-31T13:12:09.0755980Z Site startup probe failed after 23.9412889 seconds.
+2025-10-31T13:12:09.1935723Z Failed to start site. Revert by stopping site.
+2025-10-31T13:12:09.2329940Z Site: python-flask-webapp-quicklabs stopped.
+2025-10-31T13:12:20.186Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:12:20.306Z INFO  - 2d765646d883 Pulling fs layer
+2025-10-31T13:12:20.317Z INFO  - ab9b3215ece1 Pulling fs layer
+2025-10-31T13:12:20.326Z INFO  - 4f4fb700ef54 Pulling fs layer
+2025-10-31T13:12:20.335Z INFO  - c8c26152a642 Pulling fs layer
+2025-10-31T13:12:20.336Z INFO  - c56fb4a3b0da Pulling fs layer
+2025-10-31T13:12:20.337Z INFO  - dbf7ae5d9c63 Pulling fs layer
+2025-10-31T13:12:20.397Z INFO  - 220c52d5c00f Pulling fs layer
+2025-10-31T13:12:20.405Z INFO  - 21afad33996d Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - a83dfeaf7e13 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 8229bfef2880 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - a829e5e6c9f1 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 43b3f19a5f7b Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 7a953f5c3c0b Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - edafa92cab42 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 5e03e1f8cc28 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 78ee667486be Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 1c6a5ee9f4e9 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - e8b550749e66 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - d15bc914a9c3 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - d33500780c7d Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 0a83b955bad1 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - ae62b20f0e06 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 038c2b53fe5f Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - d75c6794473c Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 0a83b955bad1 Waiting
+2025-10-31T13:12:20.406Z INFO  - ae62b20f0e06 Waiting
+2025-10-31T13:12:20.406Z INFO  - 038c2b53fe5f Waiting
+2025-10-31T13:12:20.406Z INFO  - d75c6794473c Waiting
+2025-10-31T13:12:20.406Z INFO  - b049d305a6a1 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - a44dc634b318 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 27073c19c451 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 13527115d99f Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - bf0fdaeeb3f7 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 5102baefcdc8 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 1025e0b47ade Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - f66774ae7759 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 9d3e177659ba Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 72b150d989ff Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 3a8890c16ee1 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - b4f74be282a8 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 54c588595ccb Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - aa5881a808a7 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 0d10948fb54a Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - cce10504149a Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 81ac14b1e143 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 5d89654d990c Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - b2884c533f11 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 52653cff8975 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 46283f458752 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 18bdf1202246 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - f9cf866730ad Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - 7b7e7c24cd01 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - b2e6613866c5 Pulling fs layer
+2025-10-31T13:12:20.406Z INFO  - b049d305a6a1 Waiting
+2025-10-31T13:12:20.406Z INFO  - a44dc634b318 Waiting
+2025-10-31T13:12:20.406Z INFO  - 27073c19c451 Waiting
+2025-10-31T13:12:20.406Z INFO  - 13527115d99f Waiting
+2025-10-31T13:12:20.406Z INFO  - bf0fdaeeb3f7 Waiting
+2025-10-31T13:12:20.406Z INFO  - 5102baefcdc8 Waiting
+2025-10-31T13:12:20.406Z INFO  - 1025e0b47ade Waiting
+2025-10-31T13:12:20.406Z INFO  - f66774ae7759 Waiting
+2025-10-31T13:12:20.406Z INFO  - 9d3e177659ba Waiting
+2025-10-31T13:12:20.406Z INFO  - 72b150d989ff Waiting
+2025-10-31T13:12:20.406Z INFO  - 3a8890c16ee1 Waiting
+2025-10-31T13:12:20.406Z INFO  - b4f74be282a8 Waiting
+2025-10-31T13:12:20.407Z INFO  - 54c588595ccb Waiting
+2025-10-31T13:12:20.407Z INFO  - aa5881a808a7 Waiting
+2025-10-31T13:12:20.407Z INFO  - 0d10948fb54a Waiting
+2025-10-31T13:12:20.407Z INFO  - cce10504149a Waiting
+2025-10-31T13:12:20.407Z INFO  - 81ac14b1e143 Waiting
+2025-10-31T13:12:20.407Z INFO  - 5d89654d990c Waiting
+2025-10-31T13:12:20.407Z INFO  - b2884c533f11 Waiting
+2025-10-31T13:12:20.407Z INFO  - 52653cff8975 Waiting
+2025-10-31T13:12:20.407Z INFO  - 46283f458752 Waiting
+2025-10-31T13:12:20.407Z INFO  - 18bdf1202246 Waiting
+2025-10-31T13:12:20.407Z INFO  - f9cf866730ad Waiting
+2025-10-31T13:12:20.407Z INFO  - 7b7e7c24cd01 Waiting
+2025-10-31T13:12:20.407Z INFO  - b2e6613866c5 Waiting
+2025-10-31T13:12:20.595Z INFO  - 4f4fb700ef54 Downloading 32B / 32B
+2025-10-31T13:12:20.595Z INFO  - c8c26152a642 Downloading 387B / 387B
+2025-10-31T13:12:20.595Z INFO  - 4f4fb700ef54 Verifying Checksum
+2025-10-31T13:12:20.595Z INFO  - 4f4fb700ef54 Download complete
+2025-10-31T13:12:20.595Z INFO  - c8c26152a642 Verifying Checksum
+2025-10-31T13:12:20.595Z INFO  - c8c26152a642 Download complete
+2025-10-31T13:12:20.595Z INFO  - c56fb4a3b0da Downloading 35KB / 1MB
+2025-10-31T13:12:20.595Z INFO  - dbf7ae5d9c63 Downloading 39KB / 39KB
+2025-10-31T13:12:20.595Z INFO  - dbf7ae5d9c63 Verifying Checksum
+2025-10-31T13:12:20.595Z INFO  - dbf7ae5d9c63 Download complete
+2025-10-31T13:12:20.596Z INFO  - 43b3f19a5f7b Downloading 3KB / 10KB
+2025-10-31T13:12:20.596Z INFO  - 8229bfef2880 Downloading 35KB / 1MB
+2025-10-31T13:12:20.596Z INFO  - 220c52d5c00f Downloading 3KB / 10KB
+2025-10-31T13:12:20.624Z INFO  - d15bc914a9c3 Downloading 2KB / 2KB
+2025-10-31T13:12:20.624Z INFO  - 1c6a5ee9f4e9 Downloading 528B / 528B
+2025-10-31T13:12:20.624Z INFO  - e8b550749e66 Downloading 527B / 527B
+2025-10-31T13:12:20.624Z INFO  - edafa92cab42 Downloading 1KB / 1KB
+2025-10-31T13:12:20.624Z INFO  - 5e03e1f8cc28 Downloading 2KB / 2KB
+2025-10-31T13:12:20.746Z INFO  - 78ee667486be Downloading 499B / 499B
+2025-10-31T13:12:20.747Z INFO  - 43b3f19a5f7b Downloading 10KB / 10KB
+2025-10-31T13:12:20.747Z INFO  - 7a953f5c3c0b Downloading 14KB / 14KB
+2025-10-31T13:12:20.836Z INFO  - a829e5e6c9f1 Downloading 39KB / 39KB
+2025-10-31T13:12:20.836Z INFO  - 220c52d5c00f Downloading 10KB / 10KB
+2025-10-31T13:12:20.836Z INFO  - 21afad33996d Downloading 14KB / 14KB
+2025-10-31T13:12:20.836Z INFO  - d15bc914a9c3 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - d15bc914a9c3 Download complete
+2025-10-31T13:12:20.836Z INFO  - 1c6a5ee9f4e9 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - e8b550749e66 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - e8b550749e66 Download complete
+2025-10-31T13:12:20.836Z INFO  - edafa92cab42 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - edafa92cab42 Download complete
+2025-10-31T13:12:20.836Z INFO  - 5e03e1f8cc28 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - 5e03e1f8cc28 Download complete
+2025-10-31T13:12:20.836Z INFO  - 78ee667486be Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - 78ee667486be Download complete
+2025-10-31T13:12:20.836Z INFO  - 43b3f19a5f7b Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - 43b3f19a5f7b Download complete
+2025-10-31T13:12:20.836Z INFO  - 1c6a5ee9f4e9 Download complete
+2025-10-31T13:12:20.836Z INFO  - 7a953f5c3c0b Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - 7a953f5c3c0b Download complete
+2025-10-31T13:12:20.836Z INFO  - a829e5e6c9f1 Verifying Checksum
+2025-10-31T13:12:20.836Z INFO  - a829e5e6c9f1 Download complete
+2025-10-31T13:12:20.836Z INFO  - 220c52d5c00f Verifying Checksum
+2025-10-31T13:12:20.837Z INFO  - 220c52d5c00f Download complete
+2025-10-31T13:12:20.837Z INFO  - 21afad33996d Verifying Checksum
+2025-10-31T13:12:20.837Z INFO  - 21afad33996d Download complete
+2025-10-31T13:12:20.837Z INFO  - 8229bfef2880 Downloading 187KB / 1MB
+2025-10-31T13:12:20.837Z INFO  - c56fb4a3b0da Downloading 1MB / 1MB
+2025-10-31T13:12:20.837Z INFO  - 0a83b955bad1 Downloading 3KB / 4KB
+2025-10-31T13:12:20.837Z INFO  - 8229bfef2880 Downloading 1MB / 1MB
+2025-10-31T13:12:20.837Z INFO  - 0a83b955bad1 Downloading 4KB / 4KB
+2025-10-31T13:12:20.837Z INFO  - c56fb4a3b0da Verifying Checksum
+2025-10-31T13:12:20.837Z INFO  - c56fb4a3b0da Download complete
+2025-10-31T13:12:20.837Z INFO  - 8229bfef2880 Verifying Checksum
+2025-10-31T13:12:20.837Z INFO  - 8229bfef2880 Download complete
+2025-10-31T13:12:20.837Z INFO  - 0a83b955bad1 Verifying Checksum
+2025-10-31T13:12:20.885Z INFO  - 0a83b955bad1 Download complete
+2025-10-31T13:12:20.885Z INFO  - a83dfeaf7e13 Downloading 536KB / 56MB
+2025-10-31T13:12:20.986Z INFO  - d33500780c7d Downloading 536KB / 111MB
+2025-10-31T13:12:20.986Z INFO  - 5102baefcdc8 Downloading 270B / 270B
+2025-10-31T13:12:20.986Z INFO  - 27073c19c451 Downloading 1KB / 1KB
+2025-10-31T13:12:20.986Z INFO  - a44dc634b318 Downloading 1KB / 1KB
+2025-10-31T13:12:20.986Z INFO  - 13527115d99f Downloading 3KB / 3KB
+2025-10-31T13:12:20.986Z INFO  - bf0fdaeeb3f7 Downloading 133B / 133B
+2025-10-31T13:12:20.986Z INFO  - 5102baefcdc8 Verifying Checksum
+2025-10-31T13:12:20.986Z INFO  - 5102baefcdc8 Download complete
+2025-10-31T13:12:20.986Z INFO  - 27073c19c451 Verifying Checksum
+2025-10-31T13:12:20.986Z INFO  - 27073c19c451 Download complete
+2025-10-31T13:12:20.986Z INFO  - a44dc634b318 Verifying Checksum
+2025-10-31T13:12:20.986Z INFO  - a44dc634b318 Download complete
+2025-10-31T13:12:20.986Z INFO  - 13527115d99f Verifying Checksum
+2025-10-31T13:12:20.986Z INFO  - 13527115d99f Download complete
+2025-10-31T13:12:20.986Z INFO  - bf0fdaeeb3f7 Verifying Checksum
+2025-10-31T13:12:20.986Z INFO  - bf0fdaeeb3f7 Download complete
+2025-10-31T13:12:21.055Z INFO  - a83dfeaf7e13 Downloading 1MB / 56MB
+2025-10-31T13:12:21.127Z INFO  - 038c2b53fe5f Downloading 696KB / 32MB
+2025-10-31T13:12:21.127Z INFO  - d33500780c7d Downloading 1MB / 111MB
+2025-10-31T13:12:21.127Z INFO  - 2d765646d883 Downloading 2MB / 51MB
+2025-10-31T13:12:21.156Z INFO  - ae62b20f0e06 Downloading 763KB / 36MB
+2025-10-31T13:12:21.196Z INFO  - 72b150d989ff Downloading 417B / 417B
+2025-10-31T13:12:21.196Z INFO  - f66774ae7759 Downloading 833B / 833B
+2025-10-31T13:12:21.196Z INFO  - 9d3e177659ba Downloading 124B / 124B
+2025-10-31T13:12:21.205Z INFO  - 1025e0b47ade Downloading 270B / 270B
+2025-10-31T13:12:21.206Z INFO  - 72b150d989ff Verifying Checksum
+2025-10-31T13:12:21.206Z INFO  - 72b150d989ff Download complete
+2025-10-31T13:12:21.206Z INFO  - f66774ae7759 Verifying Checksum
+2025-10-31T13:12:21.206Z INFO  - f66774ae7759 Download complete
+2025-10-31T13:12:21.206Z INFO  - 9d3e177659ba Verifying Checksum
+2025-10-31T13:12:21.206Z INFO  - 9d3e177659ba Download complete
+2025-10-31T13:12:21.206Z INFO  - 1025e0b47ade Verifying Checksum
+2025-10-31T13:12:21.206Z INFO  - 1025e0b47ade Download complete
+2025-10-31T13:12:21.365Z INFO  - b049d305a6a1 Downloading 537KB / 67MB
+2025-10-31T13:12:21.365Z INFO  - d75c6794473c Downloading 259KB / 5MB
+2025-10-31T13:12:21.394Z INFO  - ab9b3215ece1 Downloading 4MB / 28MB
+2025-10-31T13:12:21.514Z INFO  - ae62b20f0e06 Downloading 1MB / 36MB
+2025-10-31T13:12:21.514Z INFO  - 54c588595ccb Downloading 2KB / 2KB
+2025-10-31T13:12:21.514Z INFO  - b4f74be282a8 Downloading 1KB / 1KB
+2025-10-31T13:12:21.514Z INFO  - 3a8890c16ee1 Downloading 1KB / 1KB
+2025-10-31T13:12:21.625Z INFO  - 54c588595ccb Verifying Checksum
+2025-10-31T13:12:21.625Z INFO  - 54c588595ccb Download complete
+2025-10-31T13:12:21.625Z INFO  - b4f74be282a8 Verifying Checksum
+2025-10-31T13:12:21.625Z INFO  - b4f74be282a8 Download complete
+2025-10-31T13:12:21.625Z INFO  - 0d10948fb54a Downloading 1KB / 1KB
+2025-10-31T13:12:21.625Z INFO  - 3a8890c16ee1 Verifying Checksum
+2025-10-31T13:12:21.625Z INFO  - 3a8890c16ee1 Download complete
+2025-10-31T13:12:21.625Z INFO  - 0d10948fb54a Verifying Checksum
+2025-10-31T13:12:21.625Z INFO  - 0d10948fb54a Download complete
+2025-10-31T13:12:21.755Z INFO  - 2d765646d883 Downloading 3MB / 51MB
+2025-10-31T13:12:21.755Z INFO  - 038c2b53fe5f Downloading 1MB / 32MB
+2025-10-31T13:12:21.974Z INFO  - d75c6794473c Downloading 835KB / 5MB
+2025-10-31T13:12:22.005Z INFO  - aa5881a808a7 Downloading 121B / 121B
+2025-10-31T13:12:22.005Z INFO  - cce10504149a Downloading 1KB / 1KB
+2025-10-31T13:12:22.005Z INFO  - 81ac14b1e143 Downloading 356B / 356B
+2025-10-31T13:12:22.035Z INFO  - 5d89654d990c Downloading 842B / 842B
+2025-10-31T13:12:22.035Z INFO  - 038c2b53fe5f Downloading 2MB / 32MB
+2025-10-31T13:12:22.036Z INFO  - aa5881a808a7 Verifying Checksum
+2025-10-31T13:12:22.036Z INFO  - aa5881a808a7 Download complete
+2025-10-31T13:12:22.036Z INFO  - cce10504149a Verifying Checksum
+2025-10-31T13:12:22.036Z INFO  - cce10504149a Download complete
+2025-10-31T13:12:22.037Z INFO  - 81ac14b1e143 Verifying Checksum
+2025-10-31T13:12:22.037Z INFO  - 81ac14b1e143 Download complete
+2025-10-31T13:12:22.075Z INFO  - 5d89654d990c Verifying Checksum
+2025-10-31T13:12:22.075Z INFO  - 5d89654d990c Download complete
+2025-10-31T13:12:22.175Z INFO  - b049d305a6a1 Downloading 1MB / 67MB
+2025-10-31T13:12:22.175Z INFO  - 038c2b53fe5f Downloading 2MB / 32MB
+2025-10-31T13:12:22.186Z INFO  - 2d765646d883 Downloading 4MB / 51MB
+2025-10-31T13:12:22.186Z INFO  - 18bdf1202246 Downloading 3KB / 11KB
+2025-10-31T13:12:22.306Z INFO  - d75c6794473c Downloading 1MB / 5MB
+2025-10-31T13:12:22.306Z INFO  - 46283f458752 Downloading 144B / 144B
+2025-10-31T13:12:22.306Z INFO  - 52653cff8975 Downloading 2KB / 2KB
+2025-10-31T13:12:22.306Z INFO  - b2884c533f11 Downloading 137B / 137B
+2025-10-31T13:12:22.325Z INFO  - b2e6613866c5 Downloading 1KB / 1KB
+2025-10-31T13:12:22.364Z INFO  - 18bdf1202246 Downloading 11KB / 11KB
+2025-10-31T13:12:22.365Z INFO  - f9cf866730ad Downloading 131KB / 5MB
+2025-10-31T13:12:22.374Z INFO  - 7b7e7c24cd01 Downloading 16KB / 16KB
+2025-10-31T13:12:22.386Z INFO  - 46283f458752 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - 46283f458752 Download complete
+2025-10-31T13:12:22.425Z INFO  - 52653cff8975 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - 52653cff8975 Download complete
+2025-10-31T13:12:22.425Z INFO  - b2884c533f11 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - b2884c533f11 Download complete
+2025-10-31T13:12:22.425Z INFO  - b2e6613866c5 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - b2e6613866c5 Download complete
+2025-10-31T13:12:22.425Z INFO  - 18bdf1202246 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - 18bdf1202246 Download complete
+2025-10-31T13:12:22.425Z INFO  - 7b7e7c24cd01 Verifying Checksum
+2025-10-31T13:12:22.425Z INFO  - 7b7e7c24cd01 Download complete
+2025-10-31T13:12:22.425Z INFO  - d33500780c7d Downloading 2MB / 111MB
+2025-10-31T13:12:22.485Z INFO  - ae62b20f0e06 Downloading 2MB / 36MB
+2025-10-31T13:12:22.554Z INFO  - d33500780c7d Downloading 3MB / 111MB
+2025-10-31T13:12:22.554Z INFO  - ab9b3215ece1 Downloading 7MB / 28MB
+2025-10-31T13:12:22.554Z INFO  - d75c6794473c Downloading 1MB / 5MB
+2025-10-31T13:12:22.654Z INFO  - a83dfeaf7e13 Downloading 4MB / 56MB
+2025-10-31T13:12:22.903Z INFO  - d75c6794473c Downloading 2MB / 5MB
+2025-10-31T13:12:22.903Z INFO  - 2d765646d883 Downloading 6MB / 51MB
+2025-10-31T13:12:22.903Z INFO  - 038c2b53fe5f Downloading 4MB / 32MB
+2025-10-31T13:12:23.164Z INFO  - d75c6794473c Downloading 3MB / 5MB
+2025-10-31T13:12:23.164Z INFO  - 038c2b53fe5f Downloading 5MB / 32MB
+2025-10-31T13:12:23.164Z INFO  - ae62b20f0e06 Downloading 5MB / 36MB
+2025-10-31T13:12:23.204Z INFO  - ab9b3215ece1 Downloading 9MB / 28MB
+2025-10-31T13:12:23.435Z INFO  - 2d765646d883 Downloading 9MB / 51MB
+2025-10-31T13:12:23.435Z INFO  - f9cf866730ad Downloading 2MB / 5MB
+2025-10-31T13:12:23.435Z INFO  - ae62b20f0e06 Downloading 5MB / 36MB
+2025-10-31T13:12:23.435Z INFO  - ab9b3215ece1 Downloading 9MB / 28MB
+2025-10-31T13:12:23.513Z INFO  - d75c6794473c Verifying Checksum
+2025-10-31T13:12:23.513Z INFO  - d75c6794473c Download complete
+2025-10-31T13:12:23.513Z INFO  - ae62b20f0e06 Downloading 6MB / 36MB
+2025-10-31T13:12:23.574Z INFO  - 038c2b53fe5f Downloading 7MB / 32MB
+2025-10-31T13:12:23.613Z INFO  - a83dfeaf7e13 Downloading 6MB / 56MB
+2025-10-31T13:12:23.694Z INFO  - f9cf866730ad Verifying Checksum
+2025-10-31T13:12:23.694Z INFO  - f9cf866730ad Download complete
+2025-10-31T13:12:23.793Z INFO  - ae62b20f0e06 Downloading 8MB / 36MB
+2025-10-31T13:12:23.793Z INFO  - d33500780c7d Downloading 6MB / 111MB
+2025-10-31T13:12:23.794Z INFO  - 2d765646d883 Downloading 10MB / 51MB
+2025-10-31T13:12:23.794Z INFO  - b049d305a6a1 Downloading 5MB / 67MB
+2025-10-31T13:12:24.056Z INFO  - 038c2b53fe5f Downloading 7MB / 32MB
+2025-10-31T13:12:24.143Z INFO  - d33500780c7d Downloading 9MB / 111MB
+2025-10-31T13:12:24.343Z INFO  - 2d765646d883 Downloading 11MB / 51MB
+2025-10-31T13:12:24.343Z INFO  - b049d305a6a1 Downloading 7MB / 67MB
+2025-10-31T13:12:24.423Z INFO  - 2d765646d883 Downloading 12MB / 51MB
+2025-10-31T13:12:24.563Z INFO  - 2d765646d883 Downloading 13MB / 51MB
+2025-10-31T13:12:24.563Z INFO  - b049d305a6a1 Downloading 8MB / 67MB
+2025-10-31T13:12:24.913Z INFO  - d33500780c7d Downloading 11MB / 111MB
+2025-10-31T13:12:24.913Z INFO  - 038c2b53fe5f Downloading 9MB / 32MB
+2025-10-31T13:12:24.913Z INFO  - ab9b3215ece1 Downloading 14MB / 28MB
+2025-10-31T13:12:24.913Z INFO  - b049d305a6a1 Downloading 9MB / 67MB
+2025-10-31T13:12:24.913Z INFO  - ab9b3215ece1 Downloading 16MB / 28MB
+2025-10-31T13:12:24.913Z INFO  - 038c2b53fe5f Downloading 10MB / 32MB
+2025-10-31T13:12:25.134Z INFO  - 038c2b53fe5f Downloading 11MB / 32MB
+2025-10-31T13:12:25.152Z INFO  - ae62b20f0e06 Downloading 14MB / 36MB
+2025-10-31T13:12:25.164Z INFO  - d33500780c7d Downloading 12MB / 111MB
+2025-10-31T13:12:25.263Z INFO  - ab9b3215ece1 Downloading 17MB / 28MB
+2025-10-31T13:12:25.274Z INFO  - b049d305a6a1 Downloading 12MB / 67MB
+2025-10-31T13:12:25.314Z INFO  - ae62b20f0e06 Downloading 14MB / 36MB
+2025-10-31T13:12:25.552Z INFO  - 038c2b53fe5f Downloading 13MB / 32MB
+2025-10-31T13:12:25.552Z INFO  - 2d765646d883 Downloading 17MB / 51MB
+2025-10-31T13:12:25.552Z INFO  - ab9b3215ece1 Downloading 19MB / 28MB
+2025-10-31T13:12:25.692Z INFO  - a83dfeaf7e13 Downloading 13MB / 56MB
+2025-10-31T13:12:25.732Z INFO  - d33500780c7d Downloading 14MB / 111MB
+2025-10-31T13:12:25.732Z INFO  - ab9b3215ece1 Downloading 19MB / 28MB
+2025-10-31T13:12:25.734Z INFO  - 038c2b53fe5f Downloading 13MB / 32MB
+2025-10-31T13:12:26.175Z INFO  - a83dfeaf7e13 Downloading 15MB / 56MB
+2025-10-31T13:12:26.175Z INFO  - 2d765646d883 Downloading 21MB / 51MB
+2025-10-31T13:12:26.175Z INFO  - d33500780c7d Downloading 15MB / 111MB
+2025-10-31T13:12:26.175Z INFO  - ab9b3215ece1 Downloading 22MB / 28MB
+2025-10-31T13:12:26.232Z INFO  - 038c2b53fe5f Downloading 15MB / 32MB
+2025-10-31T13:12:26.283Z INFO  - ab9b3215ece1 Downloading 23MB / 28MB
+2025-10-31T13:12:26.284Z INFO  - d33500780c7d Downloading 16MB / 111MB
+2025-10-31T13:12:26.314Z INFO  - a83dfeaf7e13 Downloading 17MB / 56MB
+2025-10-31T13:12:26.442Z INFO  - ae62b20f0e06 Downloading 18MB / 36MB
+2025-10-31T13:12:26.503Z INFO  - 2d765646d883 Downloading 22MB / 51MB
+2025-10-31T13:12:26.603Z INFO  - b049d305a6a1 Downloading 18MB / 67MB
+2025-10-31T13:12:26.754Z INFO  - 2d765646d883 Downloading 24MB / 51MB
+2025-10-31T13:12:26.754Z INFO  - ae62b20f0e06 Downloading 20MB / 36MB
+2025-10-31T13:12:26.754Z INFO  - d33500780c7d Downloading 18MB / 111MB
+2025-10-31T13:12:26.803Z INFO  - ae62b20f0e06 Downloading 21MB / 36MB
+2025-10-31T13:12:26.903Z INFO  - 038c2b53fe5f Downloading 17MB / 32MB
+2025-10-31T13:12:27.063Z INFO  - 038c2b53fe5f Downloading 18MB / 32MB
+2025-10-31T13:12:27.063Z INFO  - 2d765646d883 Downloading 27MB / 51MB
+2025-10-31T13:12:27.063Z INFO  - a83dfeaf7e13 Downloading 19MB / 56MB
+2025-10-31T13:12:27.063Z INFO  - ae62b20f0e06 Downloading 23MB / 36MB
+2025-10-31T13:12:27.063Z INFO  - d33500780c7d Downloading 20MB / 111MB
+2025-10-31T13:12:27.194Z INFO  - ae62b20f0e06 Downloading 23MB / 36MB
+2025-10-31T13:12:27.194Z INFO  - ab9b3215ece1 Downloading 25MB / 28MB
+2025-10-31T13:12:27.252Z INFO  - ae62b20f0e06 Downloading 24MB / 36MB
+2025-10-31T13:12:27.322Z INFO  - 2d765646d883 Downloading 29MB / 51MB
+2025-10-31T13:12:27.352Z INFO  - d33500780c7d Downloading 22MB / 111MB
+2025-10-31T13:12:27.352Z INFO  - a83dfeaf7e13 Downloading 20MB / 56MB
+2025-10-31T13:12:27.372Z INFO  - b049d305a6a1 Downloading 20MB / 67MB
+2025-10-31T13:12:27.391Z INFO  - ab9b3215ece1 Downloading 27MB / 28MB
+2025-10-31T13:12:27.391Z INFO  - ab9b3215ece1 Verifying Checksum
+2025-10-31T13:12:27.391Z INFO  - ab9b3215ece1 Download complete
+2025-10-31T13:12:27.427Z INFO  - 038c2b53fe5f Downloading 20MB / 32MB
+2025-10-31T13:12:27.456Z INFO  - 2d765646d883 Downloading 30MB / 51MB
+2025-10-31T13:12:27.598Z INFO  - 2d765646d883 Downloading 31MB / 51MB
+2025-10-31T13:12:27.617Z INFO  - b049d305a6a1 Downloading 21MB / 67MB
+2025-10-31T13:12:27.739Z INFO  - ae62b20f0e06 Downloading 25MB / 36MB
+2025-10-31T13:12:27.959Z INFO  - 2d765646d883 Downloading 32MB / 51MB
+2025-10-31T13:12:27.959Z INFO  - a83dfeaf7e13 Downloading 22MB / 56MB
+2025-10-31T13:12:27.988Z INFO  - b049d305a6a1 Downloading 22MB / 67MB
+2025-10-31T13:12:28.018Z INFO  - a83dfeaf7e13 Downloading 23MB / 56MB
+2025-10-31T13:12:28.018Z INFO  - 2d765646d883 Downloading 33MB / 51MB
+2025-10-31T13:12:28.087Z INFO  - b049d305a6a1 Downloading 23MB / 67MB
+2025-10-31T13:12:28.087Z INFO  - ae62b20f0e06 Downloading 26MB / 36MB
+2025-10-31T13:12:28.248Z INFO  - 2d765646d883 Downloading 35MB / 51MB
+2025-10-31T13:12:28.349Z INFO  - d33500780c7d Downloading 27MB / 111MB
+2025-10-31T13:12:28.408Z INFO  - ae62b20f0e06 Downloading 28MB / 36MB
+2025-10-31T13:12:28.409Z INFO  - 2d765646d883 Downloading 37MB / 51MB
+2025-10-31T13:12:28.469Z INFO  - b049d305a6a1 Downloading 24MB / 67MB
+2025-10-31T13:12:28.636Z INFO  - d33500780c7d Downloading 29MB / 111MB
+2025-10-31T13:12:28.639Z INFO  - 038c2b53fe5f Downloading 28MB / 32MB
+2025-10-31T13:12:28.739Z INFO  - a83dfeaf7e13 Downloading 28MB / 56MB
+2025-10-31T13:12:28.868Z INFO  - b049d305a6a1 Downloading 26MB / 67MB
+2025-10-31T13:12:28.868Z INFO  - ae62b20f0e06 Downloading 32MB / 36MB
+2025-10-31T13:12:28.869Z INFO  - d33500780c7d Downloading 31MB / 111MB
+2025-10-31T13:12:28.869Z INFO  - 2d765646d883 Downloading 40MB / 51MB
+2025-10-31T13:12:28.919Z INFO  - d33500780c7d Downloading 31MB / 111MB
+2025-10-31T13:12:28.992Z INFO  - 038c2b53fe5f Downloading 30MB / 32MB
+2025-10-31T13:12:28.997Z INFO  - b049d305a6a1 Downloading 30MB / 67MB
+2025-10-31T13:12:28.997Z INFO  - 038c2b53fe5f Verifying Checksum
+2025-10-31T13:12:28.998Z INFO  - 038c2b53fe5f Download complete
+2025-10-31T13:12:29.078Z INFO  - a83dfeaf7e13 Downloading 30MB / 56MB
+2025-10-31T13:12:29.079Z INFO  - 2d765646d883 Downloading 41MB / 51MB
+2025-10-31T13:12:29.128Z INFO  - ae62b20f0e06 Verifying Checksum
+2025-10-31T13:12:29.129Z INFO  - ae62b20f0e06 Download complete
+2025-10-31T13:12:29.199Z INFO  - d33500780c7d Downloading 36MB / 111MB
+2025-10-31T13:12:29.218Z INFO  - a83dfeaf7e13 Downloading 34MB / 56MB
+2025-10-31T13:12:29.388Z INFO  - b049d305a6a1 Downloading 38MB / 67MB
+2025-10-31T13:12:29.409Z INFO  - d33500780c7d Downloading 42MB / 111MB
+2025-10-31T13:12:29.469Z INFO  - b049d305a6a1 Downloading 40MB / 67MB
+2025-10-31T13:12:29.469Z INFO  - 2d765646d883 Verifying Checksum
+2025-10-31T13:12:29.470Z INFO  - 2d765646d883 Download complete
+2025-10-31T13:12:29.568Z INFO  - d33500780c7d Downloading 45MB / 111MB
+2025-10-31T13:12:29.569Z INFO  - a83dfeaf7e13 Downloading 43MB / 56MB
+2025-10-31T13:12:29.717Z INFO  - b049d305a6a1 Downloading 50MB / 67MB
+2025-10-31T13:12:29.777Z INFO  - d33500780c7d Downloading 49MB / 111MB
+2025-10-31T13:12:29.950Z INFO  - a83dfeaf7e13 Downloading 50MB / 56MB
+2025-10-31T13:12:30.047Z INFO  - 2d765646d883 Extracting 1MB / 51MB
+2025-10-31T13:12:30.096Z INFO  - d33500780c7d Downloading 52MB / 111MB
+2025-10-31T13:12:30.166Z INFO  - a83dfeaf7e13 Downloading 52MB / 56MB
+2025-10-31T13:12:30.168Z INFO  - b049d305a6a1 Downloading 53MB / 67MB
+2025-10-31T13:12:30.168Z INFO  - d33500780c7d Downloading 53MB / 111MB
+2025-10-31T13:12:30.207Z INFO  - a83dfeaf7e13 Downloading 56MB / 56MB
+2025-10-31T13:12:30.248Z INFO  - 2d765646d883 Extracting 2MB / 51MB
+2025-10-31T13:12:30.286Z INFO  - a83dfeaf7e13 Verifying Checksum
+2025-10-31T13:12:30.286Z INFO  - a83dfeaf7e13 Download complete
+2025-10-31T13:12:30.397Z INFO  - b049d305a6a1 Downloading 57MB / 67MB
+2025-10-31T13:12:30.477Z INFO  - d33500780c7d Downloading 64MB / 111MB
+2025-10-31T13:12:30.628Z INFO  - d33500780c7d Downloading 65MB / 111MB
+2025-10-31T13:12:30.707Z INFO  - b049d305a6a1 Downloading 65MB / 67MB
+2025-10-31T13:12:30.895Z INFO  - d33500780c7d Downloading 69MB / 111MB
+2025-10-31T13:12:30.896Z INFO  - 2d765646d883 Extracting 3MB / 51MB
+2025-10-31T13:12:30.976Z INFO  - d33500780c7d Downloading 71MB / 111MB
+2025-10-31T13:12:31.135Z INFO  - d33500780c7d Downloading 72MB / 111MB
+2025-10-31T13:12:31.465Z INFO  - b049d305a6a1 Verifying Checksum
+2025-10-31T13:12:31.466Z INFO  - b049d305a6a1 Download complete
+2025-10-31T13:12:31.975Z INFO  - d33500780c7d Downloading 73MB / 111MB
+2025-10-31T13:12:32.222Z INFO  - d33500780c7d Downloading 74MB / 111MB
+2025-10-31T13:12:32.330Z INFO  - 2d765646d883 Extracting 12MB / 51MB
+2025-10-31T13:12:32.642Z INFO  - d33500780c7d Downloading 75MB / 111MB
+2025-10-31T13:12:32.974Z INFO  - d33500780c7d Downloading 76MB / 111MB
+2025-10-31T13:12:33.263Z INFO  - 2d765646d883 Extracting 17MB / 51MB
+2025-10-31T13:12:33.493Z INFO  - 2d765646d883 Extracting 20MB / 51MB
+2025-10-31T13:12:33.641Z INFO  - d33500780c7d Downloading 78MB / 111MB
+2025-10-31T13:12:33.642Z INFO  - 2d765646d883 Extracting 22MB / 51MB
+2025-10-31T13:12:33.642Z INFO  - 2d765646d883 Extracting 23MB / 51MB
+2025-10-31T13:12:33.885Z INFO  - d33500780c7d Downloading 78MB / 111MB
+2025-10-31T13:12:33.977Z INFO  - d33500780c7d Downloading 79MB / 111MB
+2025-10-31T13:12:34.147Z INFO  - 2d765646d883 Extracting 26MB / 51MB
+2025-10-31T13:12:34.447Z INFO  - d33500780c7d Downloading 92MB / 111MB
+2025-10-31T13:12:34.845Z INFO  - d33500780c7d Downloading 109MB / 111MB
+2025-10-31T13:12:34.845Z INFO  - d33500780c7d Downloading 111MB / 111MB
+2025-10-31T13:12:34.856Z INFO  - d33500780c7d Verifying Checksum
+2025-10-31T13:12:34.856Z INFO  - d33500780c7d Download complete
+2025-10-31T13:12:35.116Z INFO  - 2d765646d883 Extracting 27MB / 51MB
+2025-10-31T13:12:35.235Z INFO  - 2d765646d883 Extracting 28MB / 51MB
+2025-10-31T13:12:35.355Z INFO  - 2d765646d883 Extracting 31MB / 51MB
+2025-10-31T13:12:35.745Z INFO  - 2d765646d883 Extracting 37MB / 51MB
+2025-10-31T13:12:36.086Z INFO  - 2d765646d883 Extracting 38MB / 51MB
+2025-10-31T13:12:37.252Z INFO  - 2d765646d883 Extracting 41MB / 51MB
+2025-10-31T13:12:37.635Z INFO  - 2d765646d883 Extracting 42MB / 51MB
+2025-10-31T13:12:38.989Z INFO  - 2d765646d883 Extracting 49MB / 51MB
+2025-10-31T13:12:39.867Z INFO  - 2d765646d883 Extracting 50MB / 51MB
+2025-10-31T13:12:40.190Z INFO  - 2d765646d883 Extracting 51MB / 51MB
+2025-10-31T13:12:40.323Z INFO  - 2d765646d883 Pull complete
+2025-10-31T13:12:41.199Z INFO  - ab9b3215ece1 Extracting 5MB / 28MB
+2025-10-31T13:12:41.780Z INFO  - ab9b3215ece1 Extracting 13MB / 28MB
+2025-10-31T13:12:41.989Z INFO  - ab9b3215ece1 Extracting 15MB / 28MB
+2025-10-31T13:12:42.059Z INFO  - ab9b3215ece1 Extracting 17MB / 28MB
+2025-10-31T13:12:42.432Z INFO  - ab9b3215ece1 Extracting 19MB / 28MB
+2025-10-31T13:12:42.640Z INFO  - ab9b3215ece1 Extracting 21MB / 28MB
+2025-10-31T13:12:42.991Z INFO  - ab9b3215ece1 Extracting 27MB / 28MB
+2025-10-31T13:12:43.030Z INFO  - ab9b3215ece1 Extracting 28MB / 28MB
+2025-10-31T13:12:43.061Z INFO  - ab9b3215ece1 Pull complete
+2025-10-31T13:12:43.064Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2025-10-31T13:12:43.080Z INFO  - 4f4fb700ef54 Extracting 32B / 32B
+2025-10-31T13:12:43.101Z INFO  - 4f4fb700ef54 Pull complete
+2025-10-31T13:12:43.112Z INFO  - c8c26152a642 Extracting 387B / 387B
+2025-10-31T13:12:43.149Z INFO  - c8c26152a642 Extracting 387B / 387B
+2025-10-31T13:12:43.161Z INFO  - c8c26152a642 Pull complete
+2025-10-31T13:12:43.163Z INFO  - c56fb4a3b0da Extracting 32KB / 1MB
+2025-10-31T13:12:43.230Z INFO  - c56fb4a3b0da Extracting 1MB / 1MB
+2025-10-31T13:12:43.234Z INFO  - c56fb4a3b0da Pull complete
+2025-10-31T13:12:43.241Z INFO  - dbf7ae5d9c63 Extracting 32KB / 39KB
+2025-10-31T13:12:43.272Z INFO  - dbf7ae5d9c63 Extracting 39KB / 39KB
+2025-10-31T13:12:43.282Z INFO  - dbf7ae5d9c63 Pull complete
+2025-10-31T13:12:43.285Z INFO  - 220c52d5c00f Extracting 10KB / 10KB
+2025-10-31T13:12:43.293Z INFO  - 220c52d5c00f Extracting 10KB / 10KB
+2025-10-31T13:12:43.319Z INFO  - 220c52d5c00f Pull complete
+2025-10-31T13:12:43.321Z INFO  - 21afad33996d Extracting 14KB / 14KB
+2025-10-31T13:12:43.361Z INFO  - 21afad33996d Extracting 14KB / 14KB
+2025-10-31T13:12:43.373Z INFO  - 21afad33996d Pull complete
+2025-10-31T13:12:43.454Z INFO  - a83dfeaf7e13 Extracting 544KB / 56MB
+2025-10-31T13:12:43.554Z INFO  - a83dfeaf7e13 Extracting 1MB / 56MB
+2025-10-31T13:12:43.673Z INFO  - a83dfeaf7e13 Extracting 2MB / 56MB
+2025-10-31T13:12:43.842Z INFO  - a83dfeaf7e13 Extracting 3MB / 56MB
+2025-10-31T13:12:44.611Z INFO  - a83dfeaf7e13 Extracting 5MB / 56MB
+2025-10-31T13:12:44.611Z INFO  - a83dfeaf7e13 Extracting 6MB / 56MB
+2025-10-31T13:12:44.611Z INFO  - a83dfeaf7e13 Extracting 7MB / 56MB
+2025-10-31T13:12:45.360Z INFO  - a83dfeaf7e13 Extracting 14MB / 56MB
+2025-10-31T13:12:45.788Z INFO  - a83dfeaf7e13 Extracting 19MB / 56MB
+2025-10-31T13:12:46.200Z INFO  - a83dfeaf7e13 Extracting 22MB / 56MB
+2025-10-31T13:12:46.200Z INFO  - a83dfeaf7e13 Extracting 23MB / 56MB
+2025-10-31T13:12:46.719Z INFO  - a83dfeaf7e13 Extracting 28MB / 56MB
+2025-10-31T13:12:46.719Z INFO  - a83dfeaf7e13 Extracting 29MB / 56MB
+2025-10-31T13:12:47.130Z INFO  - a83dfeaf7e13 Extracting 31MB / 56MB
+2025-10-31T13:12:47.259Z INFO  - a83dfeaf7e13 Extracting 36MB / 56MB
+2025-10-31T13:12:47.450Z INFO  - a83dfeaf7e13 Extracting 37MB / 56MB
+2025-10-31T13:12:47.936Z INFO  - a83dfeaf7e13 Extracting 39MB / 56MB
+2025-10-31T13:12:48.748Z INFO  - a83dfeaf7e13 Extracting 49MB / 56MB
+2025-10-31T13:12:48.767Z INFO  - a83dfeaf7e13 Extracting 51MB / 56MB
+2025-10-31T13:12:49.387Z INFO  - a83dfeaf7e13 Extracting 56MB / 56MB
+2025-10-31T13:12:49.405Z INFO  - a83dfeaf7e13 Extracting 56MB / 56MB
+2025-10-31T13:12:49.428Z INFO  - a83dfeaf7e13 Pull complete
+2025-10-31T13:12:49.432Z INFO  - 8229bfef2880 Extracting 32KB / 1MB
+2025-10-31T13:12:49.590Z INFO  - 8229bfef2880 Extracting 384KB / 1MB
+2025-10-31T13:12:49.599Z INFO  - 8229bfef2880 Extracting 1MB / 1MB
+2025-10-31T13:12:49.653Z INFO  - 8229bfef2880 Pull complete
+2025-10-31T13:12:49.654Z INFO  - a829e5e6c9f1 Extracting 32KB / 39KB
+2025-10-31T13:12:49.700Z INFO  - a829e5e6c9f1 Extracting 39KB / 39KB
+2025-10-31T13:12:49.712Z INFO  - a829e5e6c9f1 Pull complete
+2025-10-31T13:12:49.739Z INFO  - 43b3f19a5f7b Extracting 10KB / 10KB
+2025-10-31T13:12:49.750Z INFO  - 43b3f19a5f7b Extracting 10KB / 10KB
+2025-10-31T13:12:49.761Z INFO  - 43b3f19a5f7b Pull complete
+2025-10-31T13:12:49.763Z INFO  - 7a953f5c3c0b Extracting 14KB / 14KB
+2025-10-31T13:12:49.780Z INFO  - 7a953f5c3c0b Extracting 14KB / 14KB
+2025-10-31T13:12:49.788Z INFO  - 7a953f5c3c0b Pull complete
+2025-10-31T13:12:49.903Z INFO  - edafa92cab42 Extracting 1KB / 1KB
+2025-10-31T13:12:49.919Z INFO  - edafa92cab42 Extracting 1KB / 1KB
+2025-10-31T13:12:49.922Z INFO  - edafa92cab42 Pull complete
+2025-10-31T13:12:50.050Z INFO  - 5e03e1f8cc28 Extracting 2KB / 2KB
+2025-10-31T13:12:50.053Z INFO  - 5e03e1f8cc28 Extracting 2KB / 2KB
+2025-10-31T13:12:50.068Z INFO  - 5e03e1f8cc28 Pull complete
+2025-10-31T13:12:50.133Z INFO  - 78ee667486be Extracting 499B / 499B
+2025-10-31T13:12:50.153Z INFO  - 78ee667486be Extracting 499B / 499B
+2025-10-31T13:12:50.172Z INFO  - 78ee667486be Pull complete
+2025-10-31T13:12:50.190Z INFO  - 1c6a5ee9f4e9 Extracting 528B / 528B
+2025-10-31T13:12:50.194Z INFO  - 1c6a5ee9f4e9 Extracting 528B / 528B
+2025-10-31T13:12:50.213Z INFO  - 1c6a5ee9f4e9 Pull complete
+2025-10-31T13:12:50.242Z INFO  - e8b550749e66 Extracting 527B / 527B
+2025-10-31T13:12:50.252Z INFO  - e8b550749e66 Extracting 527B / 527B
+2025-10-31T13:12:50.301Z INFO  - e8b550749e66 Pull complete
+2025-10-31T13:12:50.303Z INFO  - d15bc914a9c3 Extracting 2KB / 2KB
+2025-10-31T13:12:50.311Z INFO  - d15bc914a9c3 Extracting 2KB / 2KB
+2025-10-31T13:12:50.330Z INFO  - d15bc914a9c3 Pull complete
+2025-10-31T13:12:50.446Z INFO  - d33500780c7d Extracting 544KB / 111MB
+2025-10-31T13:12:50.854Z INFO  - d33500780c7d Extracting 4MB / 111MB
+2025-10-31T13:12:51.104Z INFO  - d33500780c7d Extracting 7MB / 111MB
+2025-10-31T13:12:51.376Z INFO  - d33500780c7d Extracting 9MB / 111MB
+2025-10-31T13:12:51.766Z INFO  - d33500780c7d Extracting 11MB / 111MB
+2025-10-31T13:12:52.105Z INFO  - d33500780c7d Extracting 13MB / 111MB
+2025-10-31T13:12:52.433Z INFO  - d33500780c7d Extracting 15MB / 111MB
+2025-10-31T13:12:52.752Z INFO  - d33500780c7d Extracting 18MB / 111MB
+2025-10-31T13:12:52.982Z INFO  - d33500780c7d Extracting 20MB / 111MB
+2025-10-31T13:12:53.233Z INFO  - d33500780c7d Extracting 23MB / 111MB
+2025-10-31T13:12:53.324Z INFO  - d33500780c7d Extracting 24MB / 111MB
+2025-10-31T13:12:53.683Z INFO  - d33500780c7d Extracting 29MB / 111MB
+2025-10-31T13:12:53.833Z INFO  - d33500780c7d Extracting 31MB / 111MB
+2025-10-31T13:12:53.982Z INFO  - d33500780c7d Extracting 34MB / 111MB
+2025-10-31T13:12:54.234Z INFO  - d33500780c7d Extracting 36MB / 111MB
+2025-10-31T13:12:54.732Z INFO  - d33500780c7d Extracting 38MB / 111MB
+2025-10-31T13:12:55.179Z INFO  - d33500780c7d Extracting 44MB / 111MB
+2025-10-31T13:12:55.428Z INFO  - d33500780c7d Extracting 47MB / 111MB
+2025-10-31T13:12:55.428Z INFO  - d33500780c7d Extracting 49MB / 111MB
+2025-10-31T13:12:55.801Z INFO  - d33500780c7d Extracting 56MB / 111MB
+2025-10-31T13:12:56.073Z INFO  - d33500780c7d Extracting 58MB / 111MB
+2025-10-31T13:12:56.182Z INFO  - d33500780c7d Extracting 58MB / 111MB
+2025-10-31T13:12:57.081Z INFO  - d33500780c7d Extracting 63MB / 111MB
+2025-10-31T13:12:57.412Z INFO  - d33500780c7d Extracting 65MB / 111MB
+2025-10-31T13:12:58.011Z INFO  - d33500780c7d Extracting 67MB / 111MB
+2025-10-31T13:12:58.241Z INFO  - d33500780c7d Extracting 69MB / 111MB
+2025-10-31T13:12:58.362Z INFO  - d33500780c7d Extracting 71MB / 111MB
+2025-10-31T13:12:58.723Z INFO  - d33500780c7d Extracting 73MB / 111MB
+2025-10-31T13:12:59.453Z INFO  - d33500780c7d Extracting 76MB / 111MB
+2025-10-31T13:12:59.854Z INFO  - d33500780c7d Extracting 78MB / 111MB
+2025-10-31T13:12:59.863Z INFO  - d33500780c7d Extracting 79MB / 111MB
+2025-10-31T13:13:00.471Z INFO  - d33500780c7d Extracting 80MB / 111MB
+2025-10-31T13:13:00.471Z INFO  - d33500780c7d Extracting 81MB / 111MB
+2025-10-31T13:13:00.801Z INFO  - d33500780c7d Extracting 83MB / 111MB
+2025-10-31T13:13:01.333Z INFO  - d33500780c7d Extracting 85MB / 111MB
+2025-10-31T13:13:02.239Z INFO  - d33500780c7d Extracting 91MB / 111MB
+2025-10-31T13:13:02.430Z INFO  - d33500780c7d Extracting 92MB / 111MB
+2025-10-31T13:13:02.871Z INFO  - d33500780c7d Extracting 94MB / 111MB
+2025-10-31T13:13:03.152Z INFO  - d33500780c7d Extracting 96MB / 111MB
+2025-10-31T13:13:03.239Z INFO  - d33500780c7d Extracting 98MB / 111MB
+2025-10-31T13:13:03.350Z INFO  - d33500780c7d Extracting 98MB / 111MB
+2025-10-31T13:13:03.741Z INFO  - d33500780c7d Extracting 100MB / 111MB
+2025-10-31T13:13:03.841Z INFO  - d33500780c7d Extracting 100MB / 111MB
+2025-10-31T13:13:04.388Z INFO  - d33500780c7d Extracting 103MB / 111MB
+2025-10-31T13:13:04.778Z INFO  - d33500780c7d Extracting 105MB / 111MB
+2025-10-31T13:13:05.569Z INFO  - d33500780c7d Extracting 107MB / 111MB
+2025-10-31T13:13:06.098Z INFO  - d33500780c7d Extracting 109MB / 111MB
+2025-10-31T13:13:06.457Z INFO  - d33500780c7d Extracting 111MB / 111MB
+2025-10-31T13:13:06.688Z INFO  - d33500780c7d Pull complete
+2025-10-31T13:13:06.690Z INFO  - 0a83b955bad1 Extracting 4KB / 4KB
+2025-10-31T13:13:06.699Z INFO  - 0a83b955bad1 Extracting 4KB / 4KB
+2025-10-31T13:13:06.708Z INFO  - 0a83b955bad1 Pull complete
+2025-10-31T13:13:07.158Z INFO  - ae62b20f0e06 Extracting 1MB / 36MB
+2025-10-31T13:13:07.298Z INFO  - ae62b20f0e06 Extracting 3MB / 36MB
+2025-10-31T13:13:07.518Z INFO  - ae62b20f0e06 Extracting 4MB / 36MB
+2025-10-31T13:13:07.980Z INFO  - ae62b20f0e06 Extracting 5MB / 36MB
+2025-10-31T13:13:08.618Z INFO  - ae62b20f0e06 Extracting 6MB / 36MB
+2025-10-31T13:13:09.527Z INFO  - ae62b20f0e06 Extracting 12MB / 36MB
+2025-10-31T13:13:09.784Z INFO  - ae62b20f0e06 Extracting 13MB / 36MB
+2025-10-31T13:13:09.895Z INFO  - ae62b20f0e06 Extracting 15MB / 36MB
+2025-10-31T13:13:10.285Z INFO  - ae62b20f0e06 Extracting 16MB / 36MB
+2025-10-31T13:13:10.294Z INFO  - ae62b20f0e06 Extracting 18MB / 36MB
+2025-10-31T13:13:10.772Z INFO  - ae62b20f0e06 Extracting 20MB / 36MB
+2025-10-31T13:13:10.813Z INFO  - ae62b20f0e06 Extracting 23MB / 36MB
+2025-10-31T13:13:11.253Z INFO  - ae62b20f0e06 Extracting 25MB / 36MB
+2025-10-31T13:13:12.152Z INFO  - ae62b20f0e06 Extracting 30MB / 36MB
+2025-10-31T13:13:13.052Z INFO  - ae62b20f0e06 Extracting 35MB / 36MB
+2025-10-31T13:13:13.528Z INFO  - ae62b20f0e06 Extracting 36MB / 36MB
+2025-10-31T13:13:13.540Z INFO  - ae62b20f0e06 Extracting 36MB / 36MB
+2025-10-31T13:13:13.750Z INFO  - ae62b20f0e06 Pull complete
+2025-10-31T13:13:14.719Z INFO  - 038c2b53fe5f Extracting 3MB / 32MB
+2025-10-31T13:13:14.930Z INFO  - 038c2b53fe5f Extracting 4MB / 32MB
+2025-10-31T13:13:15.480Z INFO  - 038c2b53fe5f Extracting 5MB / 32MB
+2025-10-31T13:13:15.818Z INFO  - 038c2b53fe5f Extracting 6MB / 32MB
+2025-10-31T13:13:16.109Z INFO  - 038c2b53fe5f Extracting 7MB / 32MB
+2025-10-31T13:13:16.550Z INFO  - 038c2b53fe5f Extracting 7MB / 32MB
+2025-10-31T13:13:16.943Z INFO  - 038c2b53fe5f Extracting 8MB / 32MB
+2025-10-31T13:13:18.033Z INFO  - 038c2b53fe5f Extracting 12MB / 32MB
+2025-10-31T13:13:18.821Z INFO  - 038c2b53fe5f Extracting 17MB / 32MB
+2025-10-31T13:13:19.030Z INFO  - 038c2b53fe5f Extracting 20MB / 32MB
+2025-10-31T13:13:19.180Z INFO  - 038c2b53fe5f Extracting 29MB / 32MB
+2025-10-31T13:13:19.181Z INFO  - 038c2b53fe5f Extracting 32MB / 32MB
+2025-10-31T13:13:19.193Z INFO  - 038c2b53fe5f Extracting 32MB / 32MB
+2025-10-31T13:13:19.235Z INFO  - 038c2b53fe5f Pull complete
+2025-10-31T13:13:19.653Z INFO  - d75c6794473c Extracting 5MB / 5MB
+2025-10-31T13:13:19.731Z INFO  - d75c6794473c Extracting 5MB / 5MB
+2025-10-31T13:13:19.761Z INFO  - d75c6794473c Pull complete
+2025-10-31T13:13:19.842Z INFO  - b049d305a6a1 Extracting 544KB / 67MB
+2025-10-31T13:13:20.342Z INFO  - b049d305a6a1 Extracting 3MB / 67MB
+2025-10-31T13:13:21.200Z INFO  - b049d305a6a1 Extracting 18MB / 67MB
+2025-10-31T13:13:21.321Z INFO  - b049d305a6a1 Extracting 19MB / 67MB
+2025-10-31T13:13:21.699Z INFO  - b049d305a6a1 Extracting 22MB / 67MB
+2025-10-31T13:13:21.839Z INFO  - b049d305a6a1 Extracting 23MB / 67MB
+2025-10-31T13:13:22.037Z INFO  - b049d305a6a1 Extracting 24MB / 67MB
+2025-10-31T13:13:22.247Z INFO  - b049d305a6a1 Extracting 24MB / 67MB
+2025-10-31T13:13:22.716Z INFO  - b049d305a6a1 Extracting 27MB / 67MB
+2025-10-31T13:13:22.828Z INFO  - b049d305a6a1 Extracting 28MB / 67MB
+2025-10-31T13:13:23.368Z INFO  - b049d305a6a1 Extracting 31MB / 67MB
+2025-10-31T13:13:23.757Z INFO  - b049d305a6a1 Extracting 32MB / 67MB
+2025-10-31T13:13:24.297Z INFO  - b049d305a6a1 Extracting 34MB / 67MB
+2025-10-31T13:13:24.577Z INFO  - b049d305a6a1 Extracting 35MB / 67MB
+2025-10-31T13:13:24.779Z INFO  - b049d305a6a1 Extracting 39MB / 67MB
+2025-10-31T13:13:24.884Z INFO  - b049d305a6a1 Extracting 39MB / 67MB
+2025-10-31T13:13:25.401Z INFO  - b049d305a6a1 Extracting 42MB / 67MB
+2025-10-31T13:13:26.095Z INFO  - b049d305a6a1 Extracting 45MB / 67MB
+2025-10-31T13:13:26.186Z INFO  - b049d305a6a1 Extracting 46MB / 67MB
+2025-10-31T13:13:26.528Z INFO  - b049d305a6a1 Extracting 46MB / 67MB
+2025-10-31T13:13:26.577Z INFO  - b049d305a6a1 Extracting 47MB / 67MB
+2025-10-31T13:13:26.777Z INFO  - b049d305a6a1 Extracting 48MB / 67MB
+2025-10-31T13:13:26.978Z INFO  - b049d305a6a1 Extracting 49MB / 67MB
+2025-10-31T13:13:27.146Z INFO  - b049d305a6a1 Extracting 50MB / 67MB
+2025-10-31T13:13:27.377Z INFO  - b049d305a6a1 Extracting 51MB / 67MB
+2025-10-31T13:13:29.243Z INFO  - b049d305a6a1 Extracting 61MB / 67MB
+2025-10-31T13:13:29.243Z INFO  - b049d305a6a1 Extracting 62MB / 67MB
+2025-10-31T13:13:29.243Z INFO  - b049d305a6a1 Extracting 64MB / 67MB
+2025-10-31T13:13:29.243Z INFO  - b049d305a6a1 Extracting 66MB / 67MB
+2025-10-31T13:13:29.333Z INFO  - b049d305a6a1 Extracting 67MB / 67MB
+2025-10-31T13:13:29.532Z INFO  - b049d305a6a1 Pull complete
+2025-10-31T13:13:29.533Z INFO  - a44dc634b318 Extracting 1KB / 1KB
+2025-10-31T13:13:29.536Z INFO  - a44dc634b318 Extracting 1KB / 1KB
+2025-10-31T13:13:29.549Z INFO  - a44dc634b318 Pull complete
+2025-10-31T13:13:29.551Z INFO  - 27073c19c451 Extracting 1KB / 1KB
+2025-10-31T13:13:29.565Z INFO  - 27073c19c451 Extracting 1KB / 1KB
+2025-10-31T13:13:29.577Z INFO  - 27073c19c451 Pull complete
+2025-10-31T13:13:29.715Z INFO  - 13527115d99f Extracting 3KB / 3KB
+2025-10-31T13:13:29.724Z INFO  - 13527115d99f Extracting 3KB / 3KB
+2025-10-31T13:13:29.744Z INFO  - 13527115d99f Pull complete
+2025-10-31T13:13:29.745Z INFO  - bf0fdaeeb3f7 Extracting 133B / 133B
+2025-10-31T13:13:29.748Z INFO  - bf0fdaeeb3f7 Extracting 133B / 133B
+2025-10-31T13:13:29.779Z INFO  - bf0fdaeeb3f7 Pull complete
+2025-10-31T13:13:30.745Z INFO  - 5102baefcdc8 Extracting 270B / 270B
+2025-10-31T13:13:30.745Z INFO  - 5102baefcdc8 Extracting 270B / 270B
+2025-10-31T13:13:30.745Z INFO  - 5102baefcdc8 Pull complete
+2025-10-31T13:13:30.745Z INFO  - 1025e0b47ade Extracting 270B / 270B
+2025-10-31T13:13:30.745Z INFO  - 1025e0b47ade Extracting 270B / 270B
+2025-10-31T13:13:30.745Z INFO  - 1025e0b47ade Pull complete
+2025-10-31T13:13:30.746Z INFO  - f66774ae7759 Extracting 833B / 833B
+2025-10-31T13:13:30.746Z INFO  - f66774ae7759 Extracting 833B / 833B
+2025-10-31T13:13:30.746Z INFO  - f66774ae7759 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 9d3e177659ba Extracting 124B / 124B
+2025-10-31T13:13:30.746Z INFO  - 9d3e177659ba Extracting 124B / 124B
+2025-10-31T13:13:30.746Z INFO  - 9d3e177659ba Pull complete
+2025-10-31T13:13:30.746Z INFO  - 72b150d989ff Extracting 417B / 417B
+2025-10-31T13:13:30.746Z INFO  - 72b150d989ff Extracting 417B / 417B
+2025-10-31T13:13:30.746Z INFO  - 72b150d989ff Pull complete
+2025-10-31T13:13:30.746Z INFO  - 3a8890c16ee1 Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - 3a8890c16ee1 Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - 3a8890c16ee1 Pull complete
+2025-10-31T13:13:30.746Z INFO  - b4f74be282a8 Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - b4f74be282a8 Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - b4f74be282a8 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 54c588595ccb Extracting 2KB / 2KB
+2025-10-31T13:13:30.746Z INFO  - 54c588595ccb Extracting 2KB / 2KB
+2025-10-31T13:13:30.746Z INFO  - 54c588595ccb Pull complete
+2025-10-31T13:13:30.746Z INFO  - aa5881a808a7 Extracting 121B / 121B
+2025-10-31T13:13:30.746Z INFO  - aa5881a808a7 Extracting 121B / 121B
+2025-10-31T13:13:30.746Z INFO  - aa5881a808a7 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 0d10948fb54a Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - 0d10948fb54a Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - 0d10948fb54a Pull complete
+2025-10-31T13:13:30.746Z INFO  - cce10504149a Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - cce10504149a Extracting 1KB / 1KB
+2025-10-31T13:13:30.746Z INFO  - cce10504149a Pull complete
+2025-10-31T13:13:30.746Z INFO  - 81ac14b1e143 Extracting 356B / 356B
+2025-10-31T13:13:30.746Z INFO  - 81ac14b1e143 Extracting 356B / 356B
+2025-10-31T13:13:30.746Z INFO  - 81ac14b1e143 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 5d89654d990c Extracting 842B / 842B
+2025-10-31T13:13:30.746Z INFO  - 5d89654d990c Extracting 842B / 842B
+2025-10-31T13:13:30.746Z INFO  - 5d89654d990c Pull complete
+2025-10-31T13:13:30.746Z INFO  - b2884c533f11 Extracting 137B / 137B
+2025-10-31T13:13:30.746Z INFO  - b2884c533f11 Extracting 137B / 137B
+2025-10-31T13:13:30.746Z INFO  - b2884c533f11 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 52653cff8975 Extracting 2KB / 2KB
+2025-10-31T13:13:30.746Z INFO  - 52653cff8975 Extracting 2KB / 2KB
+2025-10-31T13:13:30.746Z INFO  - 52653cff8975 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 46283f458752 Extracting 144B / 144B
+2025-10-31T13:13:30.746Z INFO  - 46283f458752 Extracting 144B / 144B
+2025-10-31T13:13:30.746Z INFO  - 46283f458752 Pull complete
+2025-10-31T13:13:30.746Z INFO  - 18bdf1202246 Extracting 11KB / 11KB
+2025-10-31T13:13:30.746Z INFO  - 18bdf1202246 Extracting 11KB / 11KB
+2025-10-31T13:13:30.746Z INFO  - 18bdf1202246 Pull complete
+2025-10-31T13:13:30.746Z INFO  - f9cf866730ad Extracting 832KB / 5MB
+2025-10-31T13:13:30.835Z INFO  - f9cf866730ad Extracting 1MB / 5MB
+2025-10-31T13:13:31.077Z INFO  - f9cf866730ad Extracting 2MB / 5MB
+2025-10-31T13:13:31.307Z INFO  - f9cf866730ad Extracting 3MB / 5MB
+2025-10-31T13:13:31.327Z INFO  - f9cf866730ad Extracting 5MB / 5MB
+2025-10-31T13:13:31.339Z INFO  - f9cf866730ad Pull complete
+2025-10-31T13:13:31.341Z INFO  - 7b7e7c24cd01 Extracting 16KB / 16KB
+2025-10-31T13:13:31.355Z INFO  - 7b7e7c24cd01 Extracting 16KB / 16KB
+2025-10-31T13:13:31.359Z INFO  - 7b7e7c24cd01 Pull complete
+2025-10-31T13:13:31.360Z INFO  - b2e6613866c5 Extracting 1KB / 1KB
+2025-10-31T13:13:31.368Z INFO  - b2e6613866c5 Extracting 1KB / 1KB
+2025-10-31T13:13:31.379Z INFO  - b2e6613866c5 Pull complete
+2025-10-31T13:13:31.439Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:13:31.449Z INFO  -  Status: Downloaded newer image for 10.1.0.5:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:13:31.498Z INFO  - Pull Image successful, Time taken: 71 Seconds
+2025-10-31T13:13:33.511Z INFO  - Starting container for site
+2025-10-31T13:13:33.511Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_0cbc5662 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:13:37.042Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_0cbc5662 for site python-flask-webapp-quicklabs
+2025-10-31T13:13:49.899Z ERROR - Container python-flask-webapp-quicklabs_0_0cbc5662 for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:13:49.925Z ERROR - Container python-flask-webapp-quicklabs_0_0cbc5662 didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:13:49.969Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.
+2025-10-31T13:16:16.653Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:16:16.764Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:16:16.923Z INFO  -  Status: Downloaded newer image for 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:16:17.013Z INFO  - Pull Image successful, Time taken: 1 Seconds
+2025-10-31T13:16:17.483Z INFO  - Starting container for site
+2025-10-31T13:16:17.491Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_8badb79c -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:16:25.359Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_8badb79c for site python-flask-webapp-quicklabs
+2025-10-31T13:16:41.475Z ERROR - Container python-flask-webapp-quicklabs_0_8badb79c for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:16:41.488Z ERROR - Container python-flask-webapp-quicklabs_0_8badb79c didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:16:41.532Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.
+2025-10-31T13:16:47.523Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:16:47.533Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:16:47.534Z INFO  -  Status: Image is up to date for 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:16:47.542Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2025-10-31T13:16:48.181Z INFO  - Starting container for site
+2025-10-31T13:16:48.182Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_2c59f28f -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:16:51.175Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_2c59f28f for site python-flask-webapp-quicklabs
+2025-10-31T13:17:05.916Z ERROR - Container python-flask-webapp-quicklabs_0_2c59f28f for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:17:05.954Z ERROR - Container python-flask-webapp-quicklabs_0_2c59f28f didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:17:05.970Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.
+2025-10-31T13:28:30.873Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:28:30.900Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:28:30.901Z INFO  -  Status: Image is up to date for 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:28:30.959Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2025-10-31T13:28:31.110Z INFO  - Starting container for site
+2025-10-31T13:28:31.111Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_8a81e8fb -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:28:34.120Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_8a81e8fb for site python-flask-webapp-quicklabs
+2025-10-31T13:28:46.697Z ERROR - Container python-flask-webapp-quicklabs_0_8a81e8fb for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:28:46.729Z ERROR - Container python-flask-webapp-quicklabs_0_8a81e8fb didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:28:46.786Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.
+2025-10-31T13:32:24.680Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:32:24.690Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:32:24.691Z INFO  -  Status: Image is up to date for 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:32:24.702Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2025-10-31T13:32:24.850Z INFO  - Starting container for site
+2025-10-31T13:32:24.852Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_5b2330f3 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:32:27.109Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_5b2330f3 for site python-flask-webapp-quicklabs
+2025-10-31T13:32:39.231Z ERROR - Container python-flask-webapp-quicklabs_0_5b2330f3 for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:32:39.257Z ERROR - Container python-flask-webapp-quicklabs_0_5b2330f3 didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:32:39.283Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.
+2025-10-31T13:37:08.217Z INFO  - 3.11_20250723.2.tuxprod Pulling from appsvc/python
+2025-10-31T13:37:08.239Z INFO  -  Digest: sha256:517bdc46b4270b6405bed2f7c4bf003d29a64ab1172ad9197e1347b1dca1e3d0
+2025-10-31T13:37:08.240Z INFO  -  Status: Image is up to date for 10.1.0.4:13209/appsvc/python:3.11_20250723.2.tuxprod
+2025-10-31T13:37:08.265Z INFO  - Pull Image successful, Time taken: 0 Seconds
+2025-10-31T13:37:08.406Z INFO  - Starting container for site
+2025-10-31T13:37:08.407Z INFO  - docker run -d --expose=8000 --name python-flask-webapp-quicklabs_0_bb616b93 -e WEBSITE_USE_DIAGNOSTIC_SERVER=false -e WEBSITE_SITE_NAME=python-flask-webapp-quicklabs -e WEBSITE_AUTH_ENABLED=False -e WEBSITE_ROLE_INSTANCE_ID=0 -e WEBSITE_HOSTNAME=python-flask-webapp-quicklabs.azurewebsites.net -e WEBSITE_INSTANCE_ID=bf8ef91ccb8fa77b4506825069ff977a4ee74a1061592a5949482f922bad3616 -e HTTP_LOGGING_ENABLED=1 appsvc/python:3.11_20250723.2.tuxprod REDACTED
+2025-10-31T13:37:13.346Z INFO  - Initiating warmup request to container python-flask-webapp-quicklabs_0_bb616b93 for site python-flask-webapp-quicklabs
+2025-10-31T13:37:32.318Z INFO  - Waiting for response to warmup request for container python-flask-webapp-quicklabs_0_bb616b93. Elapsed time = 18.9710792 sec
+2025-10-31T13:37:33.452Z ERROR - Container python-flask-webapp-quicklabs_0_bb616b93 for site python-flask-webapp-quicklabs has exited, failing site start
+2025-10-31T13:37:33.471Z ERROR - Container python-flask-webapp-quicklabs_0_bb616b93 didn't respond to HTTP pings on port: 8000. Failing site start. See container logs for debugging.
+2025-10-31T13:37:33.489Z INFO  - Stopping site python-flask-webapp-quicklabs because it failed during startup.

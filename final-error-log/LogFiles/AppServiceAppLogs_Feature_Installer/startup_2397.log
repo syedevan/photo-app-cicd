@@ -1,0 +1,16 @@
+2025-10-31 11:19:46,430  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2025-10-31 11:19:46,431  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2025-10-31 11:19:46,431  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2025-10-31 11:19:47,309  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2025-10-31 11:21:50,162  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2025-10-31 11:21:50,163  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2025-10-31 11:21:50,163  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2025-10-31 11:21:52,153  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2025-10-31 11:29:47,637  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2025-10-31 11:29:47,657  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2025-10-31 11:29:47,667  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2025-10-31 11:29:48,538  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set
+2025-10-31 12:58:13,698  [MainThread] [DEBUG] : Initializating AppServiceAppLogging 
+2025-10-31 12:58:13,716  [Thread-1 (] [DEBUG] : Did not find any previously bound socket
+2025-10-31 12:58:13,716  [MainThread] [DEBUG] : Initialized AppServiceAppLogging
+2025-10-31 12:58:16,464  [Thread-3 (] [DEBUG] : Waiting for the logs flag to be set

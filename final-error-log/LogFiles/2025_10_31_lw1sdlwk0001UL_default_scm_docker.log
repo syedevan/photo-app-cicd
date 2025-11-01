@@ -1,0 +1,27 @@
+2025-10-31T13:11:24.6049745Z     __ __          __      __    _ __     
+2025-10-31T13:11:24.6050946Z    / //_/_  _ ____/ /_  __/ /   (_) /____ 
+2025-10-31T13:11:24.6050983Z   / ,< / / / / __  / / / / /   / / __/ _  
+2025-10-31T13:11:24.6051005Z  / /| / /_/ / /_/ / /_/ / /___/ / /_/  __/
+2025-10-31T13:11:24.6051027Z /_/ |_\__,_/\__,_/\__,_/_____/_/\__/\___/ 
+2025-10-31T13:11:24.6051052Z 
+2025-10-31T13:11:24.6051078Z                                           
+2025-10-31T13:11:24.6051098Z DEBUG CONSOLE | AZURE APP SERVICE ON LINUX
+2025-10-31T13:11:24.6051130Z 
+2025-10-31T13:11:24.6051153Z Documentation: http://aka.ms/webapp-linux
+2025-10-31T13:11:24.6051173Z Kudu Version : 20250917.3
+2025-10-31T13:11:24.6051195Z Commit       : 915b72833717358dab58b9a5b15812c44b8842d3
+2025-10-31T13:11:24.6051212Z 
+2025-10-31T13:11:25.2757520Z chown: changing ownership of '/temp': Operation not permitted
+2025-10-31T13:11:25.2953584Z chmod: changing permissions of '/temp': Operation not permitted
+2025-10-31T13:11:26.1865594Z Restarting OpenBSD Secure Shell server: sshd.
+2025-10-31T13:11:26.2473365Z node not running, starting node /opt/webssh/index.js
+2025-10-31T13:11:32.2213956Z Fri Oct 31 13:11:32 UTC 2025 running .net core
+2025-10-31T13:11:32.8205754Z Startup : 01.11.32.809831
+2025-10-31T13:11:32.8391190Z Configure Services : 01.11.32.838967
+2025-10-31T13:11:33.1315090Z Configure : 01.11.33.131385
+2025-10-31T13:11:33.3421237Z Setting Up Routes : 01.11.33.341979
+2025-10-31T13:11:33.6524617Z Exiting Configure : 01.11.33.644302
+2025-10-31T13:11:33.8454296Z Hosting environment: Production
+2025-10-31T13:11:33.8543110Z Content root path: /opt/Kudu
+2025-10-31T13:11:33.8543285Z Now listening on: http://0.0.0.0:8181
+2025-10-31T13:11:33.8543314Z Application started. Press Ctrl+C to shut down.

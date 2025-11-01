@@ -1,0 +1,169 @@
+2025-10-31T13:26:44.3590999Z,Updating submodules.,51936729-382d-4478-be47-e2d0b932775e,0
+2025-10-31T13:26:45.5702110Z,Preparing deployment for commit id '48d7bb39-8'.,8b811339-1b2d-4a26-ad98-08c3a94f18a6,0
+2025-10-31T13:26:46.0760760Z,PreDeployment: context.CleanOutputPath False,a26e030a-32fb-4369-ae3c-5c3951cba1c2,0
+2025-10-31T13:26:46.2793944Z,PreDeployment: context.OutputPath /home/site/wwwroot,21380e16-866e-48a2-b16a-7050045d5ee3,0
+2025-10-31T13:26:46.5268209Z,Repository path is /tmp/zipdeploy/extracted,64b0cd38-813b-49fc-bc85-9cffce9d41c5,0
+2025-10-31T13:26:46.6590389Z,Running oryx build...,060e5007-850f-491f-859a-cb36671a7190,0
+	2025-10-31T13:26:46.6835304Z,Command: oryx build /tmp/zipdeploy/extracted -o /home/site/wwwroot --platform python --platform-version 3.11 -p virtualenv_name=antenv --log-file /tmp/build-debug.log  -i /tmp/8de188123701567 --compress-destination-dir | tee /tmp/oryx-build.log,,0
+	2025-10-31T13:26:48.7909410Z,Operation performed by Microsoft Oryx&comma; https://github.com/Microsoft/Oryx,,0
+	2025-10-31T13:26:48.8939863Z,You can report issues at https://github.com/Microsoft/Oryx/issues,,0
+	2025-10-31T13:26:48.9223097Z,,,0
+	2025-10-31T13:26:48.9632816Z,Oryx Version: 0.2.20250611.1+0649de32f1279969c9023dd41b389cce4bb94493&comma; Commit: 0649de32f1279969c9023dd41b389cce4bb94493&comma; ReleaseTagName: 20250611.1,,0
+	2025-10-31T13:26:49.0300278Z,,,0
+	2025-10-31T13:26:49.0817691Z,Build Operation ID: efbc8527fb5f1547,,0
+	2025-10-31T13:26:49.1396605Z,Repository Commit : 48d7bb39-8a89-4e76-b9d5-12459b1553b0,,0
+	2025-10-31T13:26:49.1897030Z,OS Type           : bullseye,,0
+	2025-10-31T13:26:49.2309098Z,Image Type        : githubactions,,0
+	2025-10-31T13:26:49.2889554Z,,,0
+	2025-10-31T13:26:49.2991097Z,Primary SDK Storage URL: https://oryx-cdn.microsoft.io,,0
+	2025-10-31T13:26:49.3419537Z,Backup SDK Storage URL: https://oryxsdks-cdn.azureedge.net,,0
+	2025-10-31T13:26:49.4006439Z,Detecting platforms...,,0
+	2025-10-31T13:26:51.3494002Z,Detected following platforms:,,0
+	2025-10-31T13:26:51.4295380Z,  python: 3.11.14,,0
+	2025-10-31T13:26:51.4801064Z,Version '3.11.14' of platform 'python' is not installed. Generating script to install it...,,0
+	2025-10-31T13:26:51.8307033Z,,,0
+	2025-10-31T13:26:51.9089365Z,Using intermediate directory '/tmp/8de188123701567'.,,0
+	2025-10-31T13:26:51.9316659Z,,,0
+	2025-10-31T13:26:51.9527435Z,Copying files to the intermediate directory...,,0
+	2025-10-31T13:26:51.9934573Z,Done in 0 sec(s).,,0
+	2025-10-31T13:26:52.0309476Z,,,0
+	2025-10-31T13:26:52.0552694Z,Source directory     : /tmp/8de188123701567,,0
+	2025-10-31T13:26:52.0998971Z,Destination directory: /home/site/wwwroot,,0
+	2025-10-31T13:26:52.1218663Z,,,0
+	2025-10-31T13:26:52.1399689Z,,,0
+	2025-10-31T13:26:52.1614406Z,Downloading and extracting 'python' version '3.11.14' to '/tmp/oryx/platforms/python/3.11.14'...,,0
+	2025-10-31T13:26:52.2002232Z,Detected image debian flavor: bullseye.,,0
+	2025-10-31T13:26:55.1771644Z,Downloaded in 3 sec(s).,,0
+	2025-10-31T13:26:55.2869359Z,Verifying checksum...,,0
+	2025-10-31T13:26:55.3550741Z,Extracting contents...,,0
+	2025-10-31T13:27:10.7132094Z,performing sha512 checksum for: python...,,0
+	2025-10-31T13:27:14.5684545Z,Done in 22 sec(s).,,0
+	2025-10-31T13:27:14.8389022Z,,,0
+	2025-10-31T13:27:14.9263652Z,image detector file exists&comma; platform is python..,,0
+	2025-10-31T13:27:15.0866655Z,OS detector file exists&comma; OS is bullseye..,,0
+	2025-10-31T13:27:15.8467272Z,Python Version: /tmp/oryx/platforms/python/3.11.14/bin/python3.11,,0
+	2025-10-31T13:27:16.0647498Z,Creating directory for command manifest file if it does not exist,,0
+	2025-10-31T13:27:16.2272881Z,Removing existing manifest file,,0
+	2025-10-31T13:27:16.3876029Z,Python Virtual Environment: antenv,,0
+	2025-10-31T13:27:16.5554823Z,Creating virtual environment...,,0
+	2025-10-31T13:27:42.0303360Z,Activating virtual environment...,,0
+	2025-10-31T13:27:42.1191617Z,Running pip install...,,0
+	2025-10-31T13:27:57.1105902Z,[13:27:43+0000] Collecting azure-core==1.36.0 (from -r requirements.txt (line 1)),,0
+	2025-10-31T13:27:57.2038327Z,[13:27:44+0000]   Downloading azure_core-1.36.0-py3-none-any.whl.metadata (47 kB),,0
+	2025-10-31T13:27:57.2733798Z,[13:27:44+0000]      ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 47.1/47.1 kB 573.3 kB/s eta 0:00:00,,0
+	2025-10-31T13:27:57.3523787Z,[13:27:44+0000] Collecting azure-storage-blob==12.27.1 (from -r requirements.txt (line 2)),,0
+	2025-10-31T13:27:57.4304047Z,[13:27:44+0000]   Downloading azure_storage_blob-12.27.1-py3-none-any.whl.metadata (26 kB),,0
+	2025-10-31T13:27:57.4924630Z,[13:27:44+0000] Collecting blinker==1.9.0 (from -r requirements.txt (line 3)),,0
+	2025-10-31T13:27:57.5405876Z,[13:27:44+0000]   Downloading blinker-1.9.0-py3-none-any.whl.metadata (1.6 kB),,0
+	2025-10-31T13:27:57.5828387Z,[13:27:44+0000] Collecting certifi==2025.10.5 (from -r requirements.txt (line 4)),,0
+	2025-10-31T13:27:57.6506585Z,[13:27:44+0000]   Downloading certifi-2025.10.5-py3-none-any.whl.metadata (2.5 kB),,0
+	2025-10-31T13:27:57.7219771Z,[13:27:44+0000] Collecting cffi==2.0.0 (from -r requirements.txt (line 5)),,0
+	2025-10-31T13:27:57.7832286Z,[13:27:44+0000]   Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl.metadata (2.6 kB),,0
+	2025-10-31T13:27:57.8534566Z,[13:27:45+0000] Collecting charset-normalizer==3.4.4 (from -r requirements.txt (line 6)),,0
+	2025-10-31T13:27:57.9108503Z,[13:27:45+0000]   Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (37 kB),,0
+	2025-10-31T13:27:57.9710695Z,[13:27:45+0000] Collecting click==8.3.0 (from -r requirements.txt (line 7)),,0
+	2025-10-31T13:27:58.0235252Z,[13:27:45+0000]   Downloading click-8.3.0-py3-none-any.whl.metadata (2.6 kB),,0
+	2025-10-31T13:27:58.0833486Z,[13:27:45+0000] Collecting colorama==0.4.6 (from -r requirements.txt (line 8)),,0
+	2025-10-31T13:27:59.1411570Z,[13:27:45+0000]   Downloading colorama-0.4.6-py2.py3-none-any.whl.metadata (17 kB),,0
+	2025-10-31T13:27:59.2227486Z,[13:27:46+0000] Collecting cryptography==46.0.3 (from -r requirements.txt (line 9)),,0
+	2025-10-31T13:27:59.3016101Z,[13:27:46+0000]   Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_28_x86_64.whl.metadata (5.7 kB),,0
+	2025-10-31T13:27:59.3607766Z,[13:27:46+0000] Collecting Flask==3.1.2 (from -r requirements.txt (line 10)),,0
+	2025-10-31T13:27:59.4033169Z,[13:27:46+0000]   Downloading flask-3.1.2-py3-none-any.whl.metadata (3.2 kB),,0
+	2025-10-31T13:27:59.4434006Z,[13:27:46+0000] Collecting idna==3.11 (from -r requirements.txt (line 11)),,0
+	2025-10-31T13:27:59.4928675Z,[13:27:46+0000]   Downloading idna-3.11-py3-none-any.whl.metadata (8.4 kB),,0
+	2025-10-31T13:27:59.5822805Z,[13:27:46+0000] Collecting isodate==0.7.2 (from -r requirements.txt (line 12)),,0
+	2025-10-31T13:27:59.6406954Z,[13:27:46+0000]   Downloading isodate-0.7.2-py3-none-any.whl.metadata (11 kB),,0
+	2025-10-31T13:27:59.7018706Z,[13:27:46+0000] Collecting itsdangerous==2.2.0 (from -r requirements.txt (line 13)),,0
+	2025-10-31T13:27:59.8034090Z,[13:27:46+0000]   Downloading itsdangerous-2.2.0-py3-none-any.whl.metadata (1.9 kB),,0
+	2025-10-31T13:27:59.8621804Z,[13:27:46+0000] Collecting Jinja2==3.1.6 (from -r requirements.txt (line 14)),,0
+	2025-10-31T13:27:59.9032198Z,[13:27:46+0000]   Downloading jinja2-3.1.6-py3-none-any.whl.metadata (2.9 kB),,0
+	2025-10-31T13:27:59.9711189Z,[13:27:47+0000] Collecting MarkupSafe==3.0.3 (from -r requirements.txt (line 15)),,0
+	2025-10-31T13:28:00.0604557Z,[13:27:47+0000]   Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl.metadata (2.7 kB),,0
+	2025-10-31T13:28:00.1206903Z,[13:27:47+0000] Collecting pycparser==2.23 (from -r requirements.txt (line 16)),,0
+	2025-10-31T13:28:00.1828198Z,[13:27:47+0000]   Downloading pycparser-2.23-py3-none-any.whl.metadata (993 bytes),,0
+	2025-10-31T13:28:00.2706535Z,[13:27:47+0000] Collecting python-dotenv==1.2.1 (from -r requirements.txt (line 17)),,0
+	2025-10-31T13:28:00.3229028Z,[13:27:47+0000]   Downloading python_dotenv-1.2.1-py3-none-any.whl.metadata (25 kB),,0
+	2025-10-31T13:28:00.3909402Z,[13:27:47+0000] Collecting requests==2.32.5 (from -r requirements.txt (line 18)),,0
+	2025-10-31T13:28:00.4524762Z,[13:27:47+0000]   Downloading requests-2.32.5-py3-none-any.whl.metadata (4.9 kB),,0
+	2025-10-31T13:28:00.5139097Z,[13:27:47+0000] Collecting typing_extensions==4.15.0 (from -r requirements.txt (line 19)),,0
+	2025-10-31T13:28:00.5331644Z,[13:27:47+0000]   Downloading typing_extensions-4.15.0-py3-none-any.whl.metadata (3.3 kB),,0
+	2025-10-31T13:28:00.5828913Z,[13:27:47+0000] Collecting urllib3==2.5.0 (from -r requirements.txt (line 20)),,0
+	2025-10-31T13:28:00.6328015Z,[13:27:47+0000]   Downloading urllib3-2.5.0-py3-none-any.whl.metadata (6.5 kB),,0
+	2025-10-31T13:28:00.7009737Z,[13:27:47+0000] Collecting Werkzeug==3.1.3 (from -r requirements.txt (line 21)),,0
+	2025-10-31T13:28:00.7531722Z,[13:27:47+0000]   Downloading werkzeug-3.1.3-py3-none-any.whl.metadata (3.7 kB),,0
+	2025-10-31T13:28:00.8225144Z,[13:27:48+0000] Collecting gunicorn (from -r requirements.txt (line 22)),,0
+	2025-10-31T13:28:00.9007147Z,[13:27:48+0000]   Downloading gunicorn-23.0.0-py3-none-any.whl.metadata (4.4 kB),,0
+	2025-10-31T13:28:00.9424475Z,[13:27:48+0000] Collecting packaging (from gunicorn->-r requirements.txt (line 22)),,0
+	2025-10-31T13:28:01.0020812Z,[13:27:48+0000]   Downloading packaging-25.0-py3-none-any.whl.metadata (3.3 kB),,0
+	2025-10-31T13:28:01.0508681Z,[13:27:48+0000] Downloading azure_core-1.36.0-py3-none-any.whl (213 kB),,0
+	2025-10-31T13:28:01.1224954Z,[13:27:48+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 213.3/213.3 kB 6.1 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:01.1915066Z,[13:27:48+0000] Downloading azure_storage_blob-12.27.1-py3-none-any.whl (428 kB),,0
+	2025-10-31T13:28:01.2827387Z,[13:27:48+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 429.0/429.0 kB 14.9 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:01.4122551Z,[13:27:48+0000] Downloading blinker-1.9.0-py3-none-any.whl (8.5 kB),,0
+	2025-10-31T13:28:01.4728016Z,[13:27:48+0000] Downloading certifi-2025.10.5-py3-none-any.whl (163 kB),,0
+	2025-10-31T13:28:01.5634683Z,[13:27:48+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 163.3/163.3 kB 40.0 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:01.6533529Z,[13:27:48+0000] Downloading cffi-2.0.0-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.whl (215 kB),,0
+	2025-10-31T13:28:01.7729193Z,[13:27:48+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 215.6/215.6 kB 59.7 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:01.8526345Z,[13:27:48+0000] Downloading charset_normalizer-3.4.4-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (151 kB),,0
+	2025-10-31T13:28:01.9528672Z,[13:27:48+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 151.6/151.6 kB 53.0 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:02.0035704Z,[13:27:49+0000] Downloading click-8.3.0-py3-none-any.whl (107 kB),,0
+	2025-10-31T13:28:02.0914433Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 107.3/107.3 kB 17.0 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:02.1718603Z,[13:27:49+0000] Downloading colorama-0.4.6-py2.py3-none-any.whl (25 kB),,0
+	2025-10-31T13:28:02.2705982Z,[13:27:49+0000] Downloading cryptography-46.0.3-cp311-abi3-manylinux_2_28_x86_64.whl (4.5 MB),,0
+	2025-10-31T13:28:02.3432747Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 4.5/4.5 MB 37.6 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:02.4622155Z,[13:27:49+0000] Downloading flask-3.1.2-py3-none-any.whl (103 kB),,0
+	2025-10-31T13:28:02.5607292Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 103.3/103.3 kB 27.8 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:02.7098921Z,[13:27:49+0000] Downloading idna-3.11-py3-none-any.whl (71 kB),,0
+	2025-10-31T13:28:02.7799456Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 71.0/71.0 kB 14.6 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:02.8981899Z,[13:27:49+0000] Downloading isodate-0.7.2-py3-none-any.whl (22 kB),,0
+	2025-10-31T13:28:03.0085878Z,[13:27:49+0000] Downloading itsdangerous-2.2.0-py3-none-any.whl (16 kB),,0
+	2025-10-31T13:28:03.1478128Z,[13:27:49+0000] Downloading jinja2-3.1.6-py3-none-any.whl (134 kB),,0
+	2025-10-31T13:28:03.2989133Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 134.9/134.9 kB 42.2 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:03.3961438Z,[13:27:49+0000] Downloading markupsafe-3.0.3-cp311-cp311-manylinux2014_x86_64.manylinux_2_17_x86_64.manylinux_2_28_x86_64.whl (22 kB),,0
+	2025-10-31T13:28:03.5945725Z,[13:27:49+0000] Downloading pycparser-2.23-py3-none-any.whl (118 kB),,0
+	2025-10-31T13:28:03.6554847Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 118.1/118.1 kB 5.7 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:03.7924996Z,[13:27:49+0000] Downloading python_dotenv-1.2.1-py3-none-any.whl (21 kB),,0
+	2025-10-31T13:28:03.8627870Z,[13:27:49+0000] Downloading requests-2.32.5-py3-none-any.whl (64 kB),,0
+	2025-10-31T13:28:03.9544645Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 64.7/64.7 kB 8.8 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:04.0826412Z,[13:27:49+0000] Downloading typing_extensions-4.15.0-py3-none-any.whl (44 kB),,0
+	2025-10-31T13:28:04.1839197Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 44.6/44.6 kB 17.2 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:04.3213884Z,[13:27:49+0000] Downloading urllib3-2.5.0-py3-none-any.whl (129 kB),,0
+	2025-10-31T13:28:04.4105523Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 129.8/129.8 kB 47.2 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:04.5202492Z,[13:27:49+0000] Downloading werkzeug-3.1.3-py3-none-any.whl (224 kB),,0
+	2025-10-31T13:28:04.6379833Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 224.5/224.5 kB 69.4 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:04.7434597Z,[13:27:49+0000] Downloading gunicorn-23.0.0-py3-none-any.whl (85 kB),,0
+	2025-10-31T13:28:04.8803914Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 85.0/85.0 kB 7.6 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:04.9420139Z,[13:27:49+0000] Downloading packaging-25.0-py3-none-any.whl (66 kB),,0
+	2025-10-31T13:28:04.9930600Z,[13:27:49+0000]    ━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━━ 66.5/66.5 kB 15.2 MB/s eta 0:00:00,,0
+	2025-10-31T13:28:05.1118741Z,[13:27:50+0000] Installing collected packages: urllib3&comma; typing_extensions&comma; python-dotenv&comma; pycparser&comma; packaging&comma; MarkupSafe&comma; itsdangerous&comma; isodate&comma; idna&comma; colorama&comma; click&comma; charset-normalizer&comma; certifi&comma; blinker&comma; Werkzeug&comma; requests&comma; Jinja2&comma; gunicorn&comma; cffi&comma; Flask&comma; cryptography&comma; azure-core&comma; azure-storage-blob,,0
+	2025-10-31T13:28:05.1615304Z,[13:27:55+0000] Successfully installed Flask-3.1.2 Jinja2-3.1.6 MarkupSafe-3.0.3 Werkzeug-3.1.3 azure-core-1.36.0 azure-storage-blob-12.27.1 blinker-1.9.0 certifi-2025.10.5 cffi-2.0.0 charset-normalizer-3.4.4 click-8.3.0 colorama-0.4.6 cryptography-46.0.3 gunicorn-23.0.0 idna-3.11 isodate-0.7.2 itsdangerous-2.2.0 packaging-25.0 pycparser-2.23 python-dotenv-1.2.1 requests-2.32.5 typing_extensions-4.15.0 urllib3-2.5.0,,0
+	2025-10-31T13:28:05.2517728Z,,,0
+	2025-10-31T13:28:05.3294883Z,[notice] A new release of pip is available: 24.0 -> 25.3,,0
+	2025-10-31T13:28:05.3703662Z,[notice] To update&comma; run: pip install --upgrade pip,,0
+	2025-10-31T13:28:05.4495834Z,Not a vso image&comma; so not writing build commands,,0
+	2025-10-31T13:28:05.5102082Z,Preparing output...,,0
+	2025-10-31T13:28:05.5905750Z,,,0
+	2025-10-31T13:28:05.6399787Z,Copying files to destination directory '/tmp/_preCompressedDestinationDir'...,,0
+	2025-10-31T13:28:05.7012302Z,Done in 3 sec(s).,,0
+	2025-10-31T13:28:05.7605310Z,Compressing content of directory '/tmp/_preCompressedDestinationDir'...,,0
+	2025-10-31T13:28:13.5918508Z,Copied the compressed output to '/home/site/wwwroot',,0
+	2025-10-31T13:28:13.6532050Z,,,0
+	2025-10-31T13:28:13.6806396Z,Removing existing manifest file,,0
+	2025-10-31T13:28:13.7129012Z,Creating a manifest file...,,0
+	2025-10-31T13:28:13.7416763Z,Manifest file created.,,0
+	2025-10-31T13:28:13.7534698Z,Copying .ostype to manifest output directory.,,0
+	2025-10-31T13:28:13.7675002Z,,,0
+	2025-10-31T13:28:13.7814754Z,Done in 82 sec(s).,,0
+2025-10-31T13:28:14.0669875Z,Running post deployment command(s)...,b206a208-0c9d-467c-8e3b-275d9c7f454b,0
+2025-10-31T13:28:14.3026415Z,,930a093e-faaa-4a41-a73f-f29562509cea,0
+2025-10-31T13:28:14.4880632Z,Generating summary of Oryx build,a5db3aaf-f571-4d96-886e-d5d07e5d1508,0
+2025-10-31T13:28:14.9395073Z,Parsing the build logs,43714c7c-ee5d-4e1c-84a9-7e8a7fe3d6af,0
+2025-10-31T13:28:15.2080993Z,Found 0 issue(s),4ebd7a0a-0fc5-4980-a4d1-32bc5060002a,0
+2025-10-31T13:28:15.3370732Z,,a9f75f14-d738-4a4a-a4ff-da2f397bf231,0
+2025-10-31T13:28:15.4497192Z,Build Summary :,f7c24176-86e1-428e-8688-66e88b6c526d,0
+2025-10-31T13:28:15.5648367Z,===============,d611bbd9-880b-4248-8634-61afc6a8cccc,0
+2025-10-31T13:28:15.6946884Z,Errors (0),ccde99fd-5b17-4e29-adcf-478965a33a96,0
+2025-10-31T13:28:15.8160777Z,Warnings (0),25fb6598-fbcc-4493-8644-5c8a51d66c9d,0
+2025-10-31T13:28:15.9391939Z,,acd00bf6-df48-40f4-a498-abbcbfbdd7a5,0
+2025-10-31T13:28:16.0898062Z,Triggering container recycle for OneDeploy by adding/updating restartTrigger.txt to the site root path,18f7031d-bedc-4a38-a2a5-95d19ab2b4db,0
+2025-10-31T13:28:16.2866512Z,Deployment successful. deployer = OneDeploy deploymentPath = OneDeploy,b14c263f-b2ba-4762-b394-b71260962479,0
