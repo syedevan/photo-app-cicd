@@ -332,8 +332,7 @@ def dislike_photo(blob_name):
 if __name__ == '__main__':
     # For Azure deployment, App Service handles the process
     # app.run(debug=True)
-<<<<<<< HEAD
+
     pass
 =======
-    pass
->>>>>>> b88e69e5b741f8402722ca09b825036dcbcdb563
+
