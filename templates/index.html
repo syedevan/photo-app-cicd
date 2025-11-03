@@ -3,62 +3,139 @@
 <head>
     <meta charset="UTF-8">
     <meta name="viewport" content="width=device-width, initial-scale=1.0">
-    <title>Photos App</title>
+    <title>Photos App Gallery</title>
+    
+    <script src="https://cdn.tailwindcss.com"></script>
+    
     <style>
-        body { font-family: sans-serif; margin: 20px; }
-        .header { background-color: #0078D4; color: white; padding: 15px; text-align: center; }
-        .gallery { display: flex; flex-wrap: wrap; gap: 20px; justify-content: space-between; margin-top: 20px; }
-        .photo-card { border: 1px solid #ccc; padding: 10px; width: 220px; text-align: center; box-shadow: 2px 2px 5px rgba(0,0,0,0.1); }
-        .photo-card img { max-width: 100%; height: auto; margin-bottom: 10px; }
-        .controls { display: flex; justify-content: space-around; margin-top: 5px; }
-        .delete-btn { background-color: #e74c3c; color: white; border: none; padding: 5px 10px; cursor: pointer; }
-        .vote-btn { background-color: #2ecc71; color: white; border: none; padding: 5px 10px; cursor: pointer; }
+        /* Custom font and base styles */
+        body {
+            font-family: 'Inter', sans-serif;
+            background-color: #f3f4f6; /* Light background */
+        }
+        /* Ensure images use object-fit for proper display */
+        .photo-image {
+            width: 100%;
+            height: 18rem; /* Consistent height for grid */
+            object-fit: cover;
+            object-position: center;
+        }
+        /* Ensure main container is styled */
+        .main-container {
+            max-width: 7xl;
+            margin-left: auto;
+            margin-right: auto;
+            padding: 1rem;
+        }
     </style>
 </head>
 <body>
 
-    <div class="header">
-        <h1>Photos App</h1>
-    </div>
+<header class="bg-gray-800 text-white shadow-lg">
+    <div class="max-w-7xl mx-auto px-4 sm:px-6 lg:px-8 py-3 flex justify-between items-center">
+        <h1 class="text-2xl font-bold">Photo Share App Gallery</h1>
+        
+        <div class="flex items-center space-x-4">
+            {% if current_user.is_authenticated %}
+                <span class="text-sm">
+                    Logged in as: <strong>{{ current_user.email }}</strong> ({{ 'Creator' if current_user.is_creator() else 'Consumer' }})
+                </span>
+                
+                <a href="{{ url_for('logout') }}" class="text-sm bg-red-600 hover:bg-red-700 px-3 py-1 rounded-full transition duration-150">Log Out</a>
+                
+                {% if current_user.is_creator() %}
+                    <a href="{{ url_for('upload_photo') }}" class="bg-green-500 hover:bg-green-600 px-4 py-1.5 text-sm font-medium rounded-full transition duration-150 shadow-md">
+                        Upload New Photo
+                    </a>
+                {% endif %}
 
-    <h2>Upload new File</h2>
-    <form action="{{ url_for('upload_photo') }}" method="post" enctype="multipart/form-data">
-        <input type="file" name="file_upload" accept=".png, .jpg, .jpeg, .gif" required>
-        <button type="submit" class="vote-btn">Submit</button>
-    </form>
-
-    <hr>
-
-    <h2>Photo Gallery</h2>
-    <div class="gallery">
-        {% for photo in blob_list %}
-        <div class="photo-card">
-            <img src="{{ photo.url }}" alt="{{ photo.name }}">
-            <p><strong>{{ photo.name }}</strong></p>
-
-            <div class="controls">
-                <span>👍 {{ photo.likes }}</span>
-                <span>👎 {{ photo.dislikes }}</span>
-            </div>
-
-            <div class="controls">
-                <form method="POST" action="{{ url_for('vote', blob_name=photo.name, action='like') }}">
-                    <button type="submit" class="vote-btn">Like</button>
-                </form>
-                <form method="POST" action="{{ url_for('vote', blob_name=photo.name, action='dislike') }}">
-                    <button type="submit" class="vote-btn" style="background-color: #f39c12;">Dislike</button>
-                </form>
-            </div>
-
-            <div class="controls" style="margin-top: 10px;">
-                <form method="POST" action="{{ url_for('delete_photo', blob_name=photo.name) }}">
-                    <button type="submit" class="delete-btn" onclick="return confirm('Are you sure you want to delete this photo?');">Delete</button>
-                </form>
-            </div>
-
+            {% else %}
+                <a href="{{ url_for('login') }}" class="text-sm bg-indigo-600 hover:bg-indigo-700 px-3 py-1.5 rounded-full transition duration-150">Log In</a>
+                <a href="{{ url_for('register') }}" class="text-sm bg-yellow-500 hover:bg-yellow-600 px-3 py-1.5 rounded-full transition duration-150">Register</a>
+            {% endif %}
         </div>
+    </div>
+</header>
+
+<main class="main-container p-4 sm:p-6 lg:p-8">
+    
+    <h2 class="text-3xl font-extrabold text-gray-900 mb-6 border-b-2 pb-2">Photo Gallery</h2>
+
+    {% with messages = get_flashed_messages(with_categories=true) %}
+        {% if messages %}
+            <ul class="mb-4">
+            {% for category, message in messages %}
+                <li class="p-3 rounded-lg text-sm {% if category == 'error' or category == 'danger' %}bg-red-100 text-red-700{% elif category == 'success' %}bg-green-100 text-green-700{% else %}bg-blue-100 text-blue-700{% endif %}">{{ message }}</li>
+            {% endfor %}
+            </ul>
+        {% endif %}
+    {% endwith %}
+
+    <div class="grid grid-cols-1 sm:grid-cols-2 lg:grid-cols-3 gap-8">
+        {% for photo in photos %} 
+            <div class="bg-white rounded-xl shadow-lg overflow-hidden transition-shadow duration-300 hover:shadow-xl">
+                
+                <div class="w-full bg-gray-100">
+                    <img 
+                        src="{{ photo.blob_url }}" 
+                        alt="{{ photo.title or 'Gallery Photo' }}" 
+                        class="photo-image"
+                        onerror="this.onerror=null; this.src='https://placehold.co/600x480/cccccc/333333?text=Image+Load+Error';"
+                    >
+                </div>
+
+                <div class="p-5">
+                    <h3 class="text-xl font-bold text-gray-900 mb-2 truncate">{{ photo.title or photo.blob_name }}</h3>
+                    <p class="text-gray-600 text-sm mb-4">{{ photo.caption or 'No caption provided.' }}</p>
+                    
+                    <div class="text-sm text-gray-500 mb-4 space-y-1">
+                        <p class="flex items-center"><span class="font-medium text-purple-600 mr-2">📍 Location:</span> {{ photo.location or 'N/A' }}</p>
+                        <p class="flex items-center"><span class="font-medium text-purple-600 mr-2">👥 People:</span> {{ photo.people_present or 'None' }}</p>
+                    </div>
+
+                    <div class="flex items-center justify-between space-x-4 pt-3 border-t">
+                        
+                        {% if current_user.is_authenticated %}
+                            
+                            <form method="POST" action="{{ url_for('like_photo', blob_name=photo.blob_name) }}" class="flex-1">
+                                <button type="submit" class="w-full flex items-center justify-center space-x-2 p-2 text-sm font-medium rounded-lg text-green-700 bg-green-100 hover:bg-green-200 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M2 10.5a1.5 1.5 0 113 0v6a1.5 1.5 0 01-3 0v-6zM6 10.333v5.433a2.5 2.5 0 00.725 1.748L11 20h3a2 2 0 002-2v-3.333a2 2 0 00-.4-1.2l-3.268-4.902A1.25 1.25 0 0012 7.778V4a2 2 0 00-2-2a1 1 0 00-1 1v.667a2 2 0 01-.4 1.2L6 10.333z" /></svg>
+                                    <span>Like ({{ photo.likes or 0 }})</span>
+                                </button>
+                            </form>
+
+                            <form method="POST" action="{{ url_for('dislike_photo', blob_name=photo.blob_name) }}" class="flex-1">
+                                <button type="submit" class="w-full flex items-center justify-center space-x-2 p-2 text-sm font-medium rounded-lg text-red-700 bg-red-100 hover:bg-red-200 transition duration-150">
+                                    <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path d="M18 9.5a1.5 1.5 0 11-3 0v-6a1.5 1.5 0 013 0v6zM14 9.667V4.234a2.5 2.5 0 00-.725-1.748L9 0H6a2 2 0 00-2 2v3.333a2 2 0 00.4 1.2l3.268 4.902A1.25 1.25 0 008 12.222V16a2 2 0 002 2a1 1 0 001-1v-.667a2 2 0 01.4-1.2L14 9.667z" /></svg>
+                                    <span>Dislike ({{ photo.dislikes or 0 }})</span>
+                                </button>
+                            </form>
+                            
+                            {% if current_user.is_creator() %}
+                                <form method="POST" action="{{ url_for('delete_photo', blob_name=photo.blob_name) }}">
+                                    <button type="submit" class="p-2 text-red-500 hover:text-red-700 transition duration-150" title="Delete Photo" onclick="return confirm('Confirm deletion?')">
+                                        <svg xmlns="http://www.w3.org/2000/svg" class="h-5 w-5" viewBox="0 0 20 20" fill="currentColor"><path fill-rule="evenodd" d="M9 2a1 1 0 00-.894.553L7.382 4H4a1 1 0 000 2v10a2 2 0 002 2h8a2 2 0 002-2V6a1 1 0 100-2h-3.382l-.724-1.447A1 1 0 0011 2H9zM7 8a1 1 0 012 0v6a1 1 0 11-2 0V8zm4 0a1 1 0 012 0v6a1 1 0 11-2 0V8z" clip-rule="evenodd" /></svg>
+                                    </button>
+                                </form>
+                            {% endif %}
+                        {% else %}
+                            <span class="text-gray-400 text-xs">Likes: {{ photo.likes or 0 }} | Dislikes: {{ photo.dislikes or 0 }} | Log in to rate.</span>
+                        {% endif %}
+                    </div>
+                </div>
+            </div>
+        {% else %}
+            <p class="col-span-3 text-center text-gray-500 p-10 bg-white rounded-xl shadow-inner">
+                No photos uploaded yet. 
+                {% if current_user.is_authenticated and current_user.is_creator() %}
+                    <a href="{{ url_for('upload_photo') }}" class="text-indigo-600 hover:text-indigo-800 font-medium">Click here to upload your first photo.</a>
+                {% else %}
+                    Check back later for new content!
+                {% endif %}
+            </p>
         {% endfor %}
     </div>
+</main>
 
 </body>
 </html>
