@@ -1,27 +1,26 @@
-# Documentation for the Azure Web Apps Deploy action: 
+# Documentation for the Azure Web Apps Deploy action:
 # https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
 
 name: Build and deploy Python app to Azure Web App
 
 env:
-  # ➡️ CHANGE THIS: Set your Azure Web App name
-  AZURE_WEBAPP_NAME: 'python-flask-webapp-quicklabs' 
-  # ➡️ CHANGE THIS: Set the Python version (matches your Azure configuration)
-  PYTHON_VERSION: '3.11' 
-  # ➡️ OPTIONAL: Set the path to your code if it's in a subfolder
-  PROJECT_PATH: '.' 
+  # ➡️ Set your Azure Web App name
+  AZURE_WEBAPP_NAME: 'python-flask-webapp-quicklabs'
+  # ➡️ Set the Python version (matches your Azure configuration)
+  PYTHON_VERSION: '3.11'
+  # ➡️ Path to your code. Use '.' if all files are in the repository root.
+  PROJECT_PATH: '.'
 
 on:
   push:
     # Trigger the deployment on a push to the main branch
     branches:
       - main
-  # Allows you to run this workflow manually from the GitHub Actions tab
   workflow_dispatch:
 
 jobs:
-  build:
+  # 1. CI Job: Build, Install Dependencies, and Test (if tests are added later)
+  build-and-test:
     runs-on: ubuntu-latest
     steps:
       - uses: actions/checkout@v4
@@ -31,14 +30,13 @@ jobs:
         with:
           python-version: ${{ env.PYTHON_VERSION }}
 
-      - name: Install dependencies
+      - name: Install dependencies (Required for running tests/linting during CI)
         run: |
-          # Change directory to the project path if it's not the root
           cd ${{ env.PROJECT_PATH }}
           python -m pip install --upgrade pip
           pip install -r requirements.txt
-      
-      # Optional: Run any tests here (e.g., pytest)
+
+      # Optional: Run tests here before deployment is allowed
       # - name: Run tests
       #   run: |
       #     cd ${{ env.PROJECT_PATH }}
@@ -47,32 +45,35 @@ jobs:
       - name: Upload artifact for deployment
         uses: actions/upload-artifact@v4
         with:
-          name: python-app
-          # Package the code and installed dependencies for deployment
+          name: python-app-source
+          # Package ONLY the source code (dependencies will be installed on Azure)
           path: ${{ env.PROJECT_PATH }}
 
-  deploy:
+  # 2. CD Job: Deploy to the Staging Slot
+  deploy-staging:
     runs-on: ubuntu-latest
-    needs: build
+    # **Crucial: Only run if the 'build-and-test' job succeeded.**
+    needs: build-and-test
     environment:
-      # You can create a 'production' environment in GitHub for better visibility and protection
-      name: 'production'
+      # Use a dedicated GitHub environment name for staging
+      name: 'staging'
       url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
 
     steps:
       - name: Download artifact from build job
         uses: actions/download-artifact@v4
         with:
-          name: python-app
-          # Download the artifact to the current directory for deployment
+          name: python-app-source
           path: .
-          
-      - name: 'Deploy to Azure Web App'
+
+      - name: 'Deploy to Azure Web App - Staging Slot'
         id: deploy-to-webapp
         uses: azure/webapps-deploy@v2
         with:
           app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          # The Publish Profile secret is required for authentication
+          # Authenticate using the Publish Profile secret
           publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          # This should be set to the path of your code (set in PROJECT_PATH env variable)
+          # **Deployment Target:** Deploy to the staging slot
+          slot-name: 'staging'
+          # **Package Path:** Use the path where the artifact was downloaded
           package: ${{ env.PROJECT_PATH }}
