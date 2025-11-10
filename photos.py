@@ -34,7 +34,11 @@ DB_CONFIG = {
     'user': os.environ.get('DB_USER', 'root'),
     'password': os.environ.get('DB_PASS', ''),
     'db': os.environ.get('DB_NAME', 'flexibleserverdb'), # Using 'flexibleserverdb' as per last successful connection
-    'cursorclass': pymysql.cursors.DictCursor
+    'cursorclass': pymysql.cursors.DictCursor,
+    'ssl': {
+        'ssl_mode': 'REQUIRED' 
+    }
+
 }
 
 def get_db_cursor():
@@ -334,5 +338,3 @@ if __name__ == '__main__':
     # app.run(debug=True)
 
     pass
-=======
-
