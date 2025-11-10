@@ -72,93 +72,20 @@ stages:
               artifactName: 'drop'
               targetPath: '$(System.DefaultWorkingDirectory)'
               
-          - task: AzureWebApp@1
-            displayName: 'Deploy Azure Web App'
-            inputs:
-              azureSubscription: '$(azureServiceConnection)'
-              appName: '$(webAppName)'
-              resourceGroupName: '$(resourceGroupName)'
-              package: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
-              # CRITICAL: Startup command for Flask on Linux App Service
-              startUpCommand: 'gunicorn --bind=0.0.0.0 --workers 2 photos:app'
+         # ... (lines 70-75 are correct)
 
-=======
-# Documentation for the Azure Web Apps Deploy action: 
-# https://github.com/Azure/webapps-deploy
-# More GitHub Actions for Azure: https://github.com/Azure/actions
+      - task: AzureWebApp@1 # This task is deprecated; consider azure/webapps-deploy@v2 or v3
+        displayName: 'Deploy Azure Web App'
+        inputs:
+          # Ensure inputs are correctly indented under the 'inputs' key
+          azureSubscription: '$(AzureServiceConnection)'
+          appName: '$(webAppName)'
+          resourceGroupName: '$(resourceGroupName)'
 
-name: Build and deploy Python app to Azure Web App
-
-env:
-  # ➡️ CHANGE THIS: Set your Azure Web App name
-  AZURE_WEBAPP_NAME: 'python-flask-webapp-quicklabs' 
-  # ➡️ CHANGE THIS: Set the Python version (matches your Azure configuration)
-  PYTHON_VERSION: '3.11' 
-  # ➡️ OPTIONAL: Set the path to your code if it's in a subfolder
-  PROJECT_PATH: '.' 
-
-on:
-  push:
-    # Trigger the deployment on a push to the main branch
-    branches:
-      - main
-  # Allows you to run this workflow manually from the GitHub Actions tab
-  workflow_dispatch:
-
-jobs:
-  build:
-    runs-on: ubuntu-latest
-    steps:
-      - uses: actions/checkout@v4
-
-      - name: Set up Python version
-        uses: actions/setup-python@v5
-        with:
-          python-version: ${{ env.PYTHON_VERSION }}
-
-      - name: Install dependencies
-        run: |
-          # Change directory to the project path if it's not the root
-          cd ${{ env.PROJECT_PATH }}
-          python -m pip install --upgrade pip
-          pip install -r requirements.txt
-      
-      # Optional: Run any tests here (e.g., pytest)
-      # - name: Run tests
-      #   run: |
-      #     cd ${{ env.PROJECT_PATH }}
-      #     pytest
-
-      - name: Upload artifact for deployment
-        uses: actions/upload-artifact@v4
-        with:
-          name: python-app
-          # Package the code and installed dependencies for deployment
-          path: ${{ env.PROJECT_PATH }}
-
-  deploy:
-    runs-on: ubuntu-latest
-    needs: build
-    environment:
-      # You can create a 'production' environment in GitHub for better visibility and protection
-      name: 'production'
-      url: ${{ steps.deploy-to-webapp.outputs.webapp-url }}
-
-    steps:
-      - name: Download artifact from build job
-        uses: actions/download-artifact@v4
-        with:
-          name: python-app
-          # Download the artifact to the current directory for deployment
-          path: .
+          # Line 81: Use single quotes for paths containing variables if needed, 
+          # or just ensure it's correctly indented.
+          package: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip' 
           
-      - name: 'Deploy to Azure Web App'
-        id: deploy-to-webapp
-        uses: azure/webapps-deploy@v2
-        with:
-          app-name: ${{ env.AZURE_WEBAPP_NAME }}
-          # The Publish Profile secret is required for authentication
-          publish-profile: ${{ secrets.AZURE_WEBAPP_PUBLISH_PROFILE }}
-          # This should be set to the path of your code (set in PROJECT_PATH env variable)
-          package: ${{ env.PROJECT_PATH }}
->>>>>>> b88e69e5b741f8402722ca09b825036dcbcdb563
+          # Line 82: CRITICAL: Multiline string or long command must be correctly formatted.
+          # Use single quotes or simply ensure proper indentation.
+          startUpCommand: 'gunicorn --bind 0.0.0.0 --workers 2 photos:app'
