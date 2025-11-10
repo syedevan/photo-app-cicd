@@ -1,8 +1,11 @@
-<<<<<<< HEAD
-trigger:
-- main # Trigger the pipeline on pushes to the 'main' branch
+name: Build and deploy Python app to Azure Web App
+on: 
+  push:
+    branches:
+      - main
 
 variables:
+
   # 1. Update with the service connection name you created in Azure DevOps
   azureServiceConnection: 'Azure-Flask-Conn' 
   # 2. Your App Service Name
@@ -78,6 +81,7 @@ stages:
               package: '$(System.DefaultWorkingDirectory)/$(Build.BuildId).zip'
               # CRITICAL: Startup command for Flask on Linux App Service
               startUpCommand: 'gunicorn --bind=0.0.0.0 --workers 2 photos:app'
+
 =======
 # Documentation for the Azure Web Apps Deploy action: 
 # https://github.com/Azure/webapps-deploy
